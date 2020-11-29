@@ -1,0 +1,21 @@
+{
+  "name": "itcontext.nl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "presets": ["next/babel"], 
+  "plugins": [ [ "styled-components", { "ssr": true, "displayName": true } ] ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  }
+}
