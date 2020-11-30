@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
     position: relative;
-    padding-top: 5rem;
+    padding-top: 10rem;
+    background-color: ${(p) => (p.color ? p.color : p.theme.black)};
 `;
 export const SectionWide = styled.section`
     position: relative;

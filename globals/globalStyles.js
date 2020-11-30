@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
 
     a{
         text-decoration: none;
+        color:inherit;
     }
     button{
         &:active,:focus{

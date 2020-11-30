@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const ButtonEmpty = styled.button`
     max-width: 20rem;
     min-height: 5rem;
-    color: ${(p) => (p.color ? p.color : p.theme.black)};
+    padding: 0.9rem 1.9rem;
+    color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.black)};
     background-color: transparent;
     font-size: 1.6rem;
@@ -45,9 +46,10 @@ export const ButtonEmpty = styled.button`
 
 export const ButtonFull = styled.button`
     max-width: 20rem;
+    padding: 0.9rem 1.9rem;
     min-height: 5rem;
-    color: ${(p) => (p.color ? p.color : p.theme.black)};
-    border: 1px solid ${(p) => (p.color ? p.color : p.theme.black)};
+    color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
+    border: 1px solid ${(p) => (p.color2 ? p.color2 : p.theme.black)};
     background-color: transparent;
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
@@ -72,7 +74,7 @@ export const ButtonFull = styled.button`
     }
 
     &:hover {
-        border: 1px solid ${(p) => (p.color2 ? p.color2 : p.theme.white)};
+        border: 1px solid ${(p) => (p.color ? p.color : p.theme.white)};
         color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
         &:after {
             top: 0;
@@ -114,27 +116,61 @@ export const Social = styled.button`
 `;
 
 export const NavLink = styled.button`
+    display: flex;
+    align-items: center;
     border: none;
     background-color: transparent;
     transition: all 0.3s;
     font-size: 1.9rem;
-    margin-right: 1.9rem;
+    margin-right: 2.7rem;
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
+    position: relative;
+    cursor: pointer;
 
     &:after {
-        content: none;
+        content: "";
         position: absolute;
         bottom: -10rem;
         opacity: 0;
         left: 0;
-        widht: 100%;
+        width: 100%;
         height: 1px;
-        background-color: ${(p) => (p.color ? p.color : p.theme.black)};
+        background-color: ${(p) => (p.color ? p.color : p.theme.white)};
     }
 
     &:hover {
         &:after {
             opacity: 1;
-            bottom: -1rem;
+            bottom: 2rem;
         }
+    }
+`;
+
+export const LinkA = styled.button`
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+    margin-right: 2.7rem;
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        span {
+            color: ${(p) => (p.color2 ? p.color2 : p.theme.silver)};
+        }
+    }
+
+    svg {
+        font-size: 2.7rem;
+        margin-right: 1.9rem;
+    }
+
+    span {
+        tranistion: all 0.3s;
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
     }
 `;
