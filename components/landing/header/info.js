@@ -16,12 +16,12 @@ function InfoComponent(props) {
         <Info>
             <Heading1 color={props.theme.white}>Web Design Studio</Heading1>
             <ParaLine>
-                We zorgen ervoor dat potentiële klanten je gemakkelijk kunnen
-                vinden en bouwen een solide basis op om hen te helpen bij het
-                kiezen van je producten en diensten.
+                Onderscheid je van de concurrentie. We ontwerpen prachtige en
+                unieke websites en helpen je met het creëren van waardevolle
+                inhoud.
             </ParaLine>
             <Buttons>
-                <Link href="/pakketen">
+                <Link href="/prijzen">
                     <ButtonEmpty
                         color={props.theme.primary}
                         color2={props.theme.white}

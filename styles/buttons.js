@@ -2,10 +2,10 @@ import { respond } from "./respond";
 import styled from "styled-components";
 
 export const ButtonEmpty = styled.button`
-    max-width: 20rem;
+    max-width: 35rem;
     min-height: 5rem;
     padding: 0.9rem 1.9rem;
-    color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
+    color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.black)};
     background-color: transparent;
     font-size: 1.6rem;
@@ -31,8 +31,8 @@ export const ButtonEmpty = styled.button`
     }
 
     &:hover {
-        border: 1px solid ${(p) => (p.color2 ? p.color2 : p.theme.white)};
-        color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
+        border: 1px solid ${(p) => (p.color2 ? p.color2 : p.theme.black)};
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
         &:after {
             top: 100%;
         }
@@ -45,7 +45,7 @@ export const ButtonEmpty = styled.button`
 `;
 
 export const ButtonFull = styled.button`
-    max-width: 20rem;
+    max-width: 35rem;
     padding: 0.9rem 1.9rem;
     min-height: 5rem;
     color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
@@ -86,7 +86,28 @@ export const ButtonFull = styled.button`
         outline: none;
     }
 `;
-
+export const ButtonPrimary = styled.button`
+    width: 35rem;
+    padding: 0.9rem 1.9rem;
+    min-height: 5rem;
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
+    border: 1px solid ${(p) => (p.color ? p.color : p.theme.white)};
+    background-color: transparent;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    &:hover {
+        border: 1px solid ${(p) => (p.color ? p.color : p.theme.white)};
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
+        background-color: ${(p) => (p.color ? p.color : p.theme.white)};
+        &:after {
+            top: 0;
+        }
+    }
+`;
 export const Social = styled.button`
     width: 4rem;
     height: 4rem;

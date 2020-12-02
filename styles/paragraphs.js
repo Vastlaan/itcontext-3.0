@@ -17,3 +17,20 @@ export const ParaLine = styled.p`
         background-color: ${(p) => p.theme.primary};
     }
 `;
+
+export const Para1 = styled.p`
+    font-size: 1.9rem;
+    color: ${(p) => (p.color ? p.color : p.theme.silver)};
+    max-width: 49rem;
+    position: relative;
+    text-align: ${(p) => (p.align ? p.align : "left")};
+    line-height: 1.4;
+`;
+export const Para2 = styled.p`
+    font-size: 1.9rem;
+    color: ${(p) => (p.color ? p.color : p.theme.silver)};
+    max-width: 60rem;
+    position: relative;
+    text-align: ${(p) => (p.align ? p.align : "left")};
+    line-height: 1.4;
+`;

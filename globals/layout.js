@@ -6,6 +6,7 @@ import ThemeProvider from "./themeProvider";
 import StateProvider from "./stateProvider";
 
 import Navigation from "../components/navigation";
+import Footer from "../components/footer";
 
 export default function Layout({ children }) {
     return (
@@ -26,6 +27,7 @@ export default function Layout({ children }) {
                     <GlobalStyles />
                     <Navigation />
                     {children}
+                    <Footer />
                 </ThemeProvider>
             </StateProvider>
         </Container>

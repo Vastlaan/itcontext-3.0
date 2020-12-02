@@ -14,11 +14,12 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: inherit;
-        line-height: 1.3;
+        line-height: inherit;
         scrollbar-width: none;
         ::-webkit-scrollbar{display: none;}
         font-family: inherit;
-        ${() => respond("m", "line-height: 1.6;")};
+
+        
 
 
     }
@@ -34,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
         ${(props) => respond("xl", `font-size:62.5%;`)}
         ${(props) => respond("xxl", `font-size:65%;`)}
         ${(props) => respond("tv", `font-size:100%;`)}
+        line-height: 1.3;
+        ${() => respond("m", "line-height: 1.6;")};
     }
 
     body{

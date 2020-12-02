@@ -1,6 +1,6 @@
 export const lightTheme = {
     secondary: "#00B2BE",
-    primary: "#c0392b",
+    primary: "#c0392b", // 192,57,43
     tertiaryLight: "#006A93",
     tertiary: "#0F284E",
 

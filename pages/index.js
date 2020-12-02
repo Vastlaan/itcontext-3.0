@@ -3,14 +3,18 @@ import Head from "next/head";
 import styled from "styled-components";
 import Layout from "../globals/layout";
 import Header from "../components/landing/header";
+import Marketing from "../components/landing/marketing";
+import Diensten from "../components/landing/diensten";
+import Summary from "../components/landing/summary";
+import Intersection from "../components/utils/intersection";
 
 export default function LandingPage() {
     return (
         <Layout>
             <Head>
                 <title>IT Context Web Design Studio</title>
-                <meta charset="utf-8" />
-                <link rel="icon" href="/static/img/favicon.ico" />
+                <meta charSet="utf-8" />
+                <link rel="icon" href="/favicon.ico" />
 
                 <meta name="theme-color" content="#0F284E" />
                 <meta
@@ -18,7 +22,7 @@ export default function LandingPage() {
                     content="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteitverhouding. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"
                     data-react-helmet="true"
                 />
-                <link rel="apple-touch-icon" href="/static/img/logo192.png" />
+                <link rel="apple-touch-icon" href="/logo192.png" />
 
                 <link rel="cannonical" href="https://itcontext.nl" />
 
@@ -34,17 +38,29 @@ export default function LandingPage() {
                     content="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteitverhouding. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"
                 />
 
-                <meta
-                    property="og:image"
-                    content="/static/img/OGImageHomepage.png"
-                />
+                <meta property="og:image" content="/OGImageHomepage.png" />
 
                 <meta property="og:url" content="https://itcontext.nl" />
 
                 <meta property="og:site_name" content="IT Context" />
             </Head>
+
             <Header />
-            <h1>Landing Page</h1>
+
+            <Marketing />
+
+            <Intersection
+                header="Wil je met ons samenwerken?"
+                para="Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar."
+                btn1="Diensten"
+                btn2="Contact"
+                link1="/diensten"
+                link2="/contact"
+            />
+
+            <Diensten />
+
+            <Summary />
         </Layout>
     );
 }
