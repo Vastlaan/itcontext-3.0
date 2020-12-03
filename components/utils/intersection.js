@@ -7,7 +7,7 @@ import {
     Content,
     ButtonPrimary,
     Para1,
-    Heading1,
+    Heading2,
 } from "../../styles";
 
 function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
@@ -21,7 +21,7 @@ function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
                     }}
                 >
                     <Info>
-                        <Heading1 color={theme.white}>{header}</Heading1>
+                        <Heading2 color={theme.white}>{header}</Heading2>
                         <Para1 color={theme.white}>{para}</Para1>
                     </Info>
                     <Buttons>
@@ -54,7 +54,7 @@ const Info = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    padding: 6.7rem 4.7rem;
+    padding: 6.7rem 2.7rem;
 
     ${() => respond("m", "grid-column: 1/3;")}
 
@@ -72,13 +72,12 @@ const Buttons = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
-    padding: 4.7rem 0;
+    padding: 0 0 2.7rem 0;
 
     ${() =>
         respond(
             "m",
-            "grid-column: 3/4; justify-content: center; flex-direction: column;"
+            "grid-column: 3/4; justify-content: center; flex-direction: column;padding: 4.7rem 0;"
         )}
 
     button {

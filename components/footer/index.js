@@ -139,8 +139,8 @@ const Footer = styled.footer`
 const Bulk = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    ${() => respond("s", "grid-template-columns: repeat(2, 1fr);")}
-    ${() => respond("l", "grid-template-columns: repeat(3, 1fr);")}
+    ${() => respond("m", "grid-template-columns: repeat(2, 1fr);")}
+    ${() => respond("l", "grid-template-columns: repeat(2, 1fr);")}
 `;
 const Info = styled.div`
     display: flex;
@@ -149,21 +149,21 @@ const Info = styled.div`
     flex: 1;
 
     h3 {
-        font-size: 2.7rem;
+        font-size: 3.3rem;
         line-height: 1;
         color: ${(p) => p.theme.white};
     }
     h4 {
-        font-size: 1.9rem;
+        font-size: 2.7rem;
         line-height: 1;
-        font-weight: 400;
+        font-weight: 600;
         color: ${(p) => p.theme.white};
     }
 
     div {
         margin: 2.7rem 0;
         p {
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             line-height: 1.3;
             color: ${(p) => p.theme.white};
             font-weight: 300;
@@ -191,9 +191,13 @@ const Links = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap-column: 2.3rem;
-    padding: 2.7rem 0;
+    padding: 2.7rem;
 
-    ${() => respond("l", "grid-template-columns: repeat(2, 1fr);")}
+    ${() =>
+        respond(
+            "m",
+            "grid-template-columns: repeat(2, 1fr); padding: 2.7rem 0;"
+        )}
 
     div {
         display: flex;
@@ -205,7 +209,7 @@ const Links = styled.div`
         h3 {
             font-weight: 600;
             color: ${(p) => p.theme.white};
-            line-height: 1.3;
+            line-height: 2.3;
             font-size: 1.9rem;
             margin-bottom: 0.9rem;
         }
@@ -216,7 +220,7 @@ const Links = styled.div`
             font-weight: 300;
             color: ${(p) => p.theme.white};
             line-height: 1.3;
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             text-transform: capitalize;
             transition: all 0.3s;
 
@@ -231,7 +235,7 @@ const Icons = styled.div`
     display: flex;
     flex-direction: row !important;
     align-items: flex-start !important;
-    margin: 0 !important;
+    margin: 2.7rem 0 !important;
 
     div {
         border: 2px solid ${(p) => p.theme.white};

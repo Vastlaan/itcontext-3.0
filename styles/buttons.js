@@ -187,7 +187,7 @@ export const LinkA = styled.button`
 
     svg {
         font-size: 2.7rem;
-        margin-right: 1.9rem;
+        margin-right: 0.9rem;
     }
 
     span {

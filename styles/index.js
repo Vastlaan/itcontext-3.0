@@ -16,7 +16,7 @@ import {
     NavLink,
     LinkA,
 } from "./buttons";
-import { Heading1, Heading3 } from "./headings";
+import { Heading1, Heading2, Heading3 } from "./headings";
 import { ParaLine, Para1, Para2 } from "./paragraphs";
 
 export {
@@ -36,6 +36,7 @@ export {
     Content,
     Grid2,
     Heading1,
+    Heading2,
     Heading3,
     ParaLine,
     Para1,

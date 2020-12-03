@@ -3,7 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import {
     respond,
-    SectionWide,
+    SectionNarrow,
     ButtonEmpty,
     ButtonFull,
     Para1,
@@ -11,7 +11,7 @@ import {
 
 export default function Summary() {
     return (
-        <SectionWide>
+        <SectionNarrow>
             <Layout>
                 <Text1>
                     <div></div>
@@ -38,7 +38,7 @@ export default function Summary() {
                     </Para1>
                 </Text2>
             </Layout>
-        </SectionWide>
+        </SectionNarrow>
     );
 }
 
