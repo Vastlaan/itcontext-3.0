@@ -9,7 +9,7 @@ export default function Poster() {
         <Layout>
             <ImageContainer>
                 <Image
-                    src="/static/img/image-2.jpg"
+                    src="/static/img/image-1.jpg"
                     alt="guy behind the desktop"
                     width="920"
                     height="676"
@@ -20,9 +20,8 @@ export default function Poster() {
                     <ImQuotesLeft />
                 </QuoteL>
                 <Para1 color="#424656" align="center">
-                    We zorgen ervoor dat potentiële klanten je gemakkelijk
-                    kunnen vinden en bouwen een solide basis op om hen te helpen
-                    bij het kiezen van je producten en diensten.
+                    We volgen wereldwijde trends en gebruiken de nieuwste en
+                    best werkende oplossingen
                 </Para1>
                 <QuoteR>
                     <ImQuotesRight />

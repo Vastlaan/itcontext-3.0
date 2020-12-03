@@ -195,3 +195,32 @@ export const LinkA = styled.button`
         color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
     }
 `;
+
+export const LinkB = styled.button`
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+    margin-right: 2.7rem;
+    margin-bottom: 1.9rem;
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: ${(p) => (p.color ? p.color : p.theme.silver)};
+        svg {
+            transform: translateX(1rem);
+        }
+    }
+
+    svg {
+        font-size: 2.7rem;
+        margin-right: 0.9rem;
+        transition: all 0.3s;
+        color: ${(p) => p.theme.primary};
+    }
+`;

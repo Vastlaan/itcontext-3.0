@@ -14,6 +14,7 @@ import {
     ButtonPrimary,
     Social,
     NavLink,
+    LinkB,
     LinkA,
 } from "./buttons";
 import { Heading1, Heading2, Heading3 } from "./headings";
@@ -29,6 +30,7 @@ export {
     ButtonPrimary,
     Social,
     NavLink,
+    LinkB,
     LinkA,
     Header,
     SectionNarrow,

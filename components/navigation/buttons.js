@@ -68,9 +68,10 @@ const Buttons = styled.div`
         )}
 
     button {
-        margin: 1.9rem;
+        margin: 2.7rem 1.9rem;
+        text-transform: uppercase;
 
-        ${() => respond("m", "margin: 0 1.9rem;")}
+        ${() => respond("m", "margin: 0 1.9rem; text-transform: capitalize;")}
     }
 `;
 const Box = styled.button`

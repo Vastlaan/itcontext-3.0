@@ -14,7 +14,7 @@ export const Heading1 = styled.h1`
         font-size: 2.7rem;
     }
 `;
-export const Heading2 = styled.h1`
+export const Heading2 = styled.h2`
     font-size: 3.3rem;
     color: ${(p) => (p.color ? p.color : p.theme.primary)};
     max-width: 60rem;
@@ -28,7 +28,7 @@ export const Heading2 = styled.h1`
         font-size: 2.7rem;
     }
 `;
-export const Heading3 = styled.h1`
+export const Heading3 = styled.h3`
     font-size: 1.9rem;
     color: ${(p) => (p.color ? p.color : p.theme.primary)};
     max-width: 60rem;

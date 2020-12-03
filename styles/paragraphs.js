@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ParaLine = styled.p`
     font-size: 1.9rem;
-    color: ${(p) => (p.color ? p.color : p.theme.silver)};
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
     max-width: 49rem;
     position: relative;
     padding-left: 1.9rem;
@@ -20,7 +20,7 @@ export const ParaLine = styled.p`
 
 export const Para1 = styled.p`
     font-size: 1.9rem;
-    color: ${(p) => (p.color ? p.color : p.theme.silver)};
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
     max-width: 49rem;
     position: relative;
     text-align: ${(p) => (p.align ? p.align : "left")};
@@ -28,7 +28,7 @@ export const Para1 = styled.p`
 `;
 export const Para2 = styled.p`
     font-size: 1.9rem;
-    color: ${(p) => (p.color ? p.color : p.theme.silver)};
+    color: ${(p) => (p.color ? p.color : p.theme.white)};
     max-width: 60rem;
     position: relative;
     text-align: ${(p) => (p.align ? p.align : "left")};
