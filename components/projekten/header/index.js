@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import styled, { withTheme } from "styled-components";
 import {
@@ -14,7 +13,7 @@ import {
 
 function HeaderDiensten(props) {
     return (
-        <Header>
+        <Header style={{ marginBottom: "4.7rem" }}>
             <Content>
                 <Grid2>
                     <Info>
@@ -34,14 +33,19 @@ function HeaderDiensten(props) {
                             prachtige en unieke websites en helpen je met het
                             creëren van waardevolle inhoud.
                         </ParaLine>
-                        <Link href="/contact">
-                            <ButtonEmpty
-                                color={props.theme.primary}
-                                color2={props.theme.white}
-                            >
-                                Contact
-                            </ButtonEmpty>
-                        </Link>
+
+                        <ButtonEmpty
+                            onClick={() =>
+                                window.scrollBy({
+                                    behavior: "smooth",
+                                    top: 600,
+                                })
+                            }
+                            color={props.theme.primary}
+                            color2={props.theme.white}
+                        >
+                            Lees meer
+                        </ButtonEmpty>
                     </Info>
                     <Picture>
                         <Image

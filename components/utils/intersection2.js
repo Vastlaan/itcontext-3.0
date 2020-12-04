@@ -1,13 +1,19 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
-import { respond, SectionWide, Content, Para1, Heading2 } from "../../styles";
+import {
+    respond,
+    SectionWide,
+    Content,
+    Para1,
+    HeadingLine,
+} from "../../styles";
 
 function Section2({ header, para1, para2, theme }) {
     return (
         <SectionWide>
             <Bulk>
                 <Content style={{ padding: " 4.7rem 2.7rem" }}>
-                    <Heading2 color={theme.black}>{header}</Heading2>
+                    <HeadingLine color={theme.black}>{header}</HeadingLine>
                     <Info>
                         <Para1 color={theme.black}>{para1}</Para1>
                         <Para1 color={theme.black}>{para2}</Para1>

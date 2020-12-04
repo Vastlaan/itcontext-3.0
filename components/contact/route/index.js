@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionNarrow, Heading2, Para1, respond } from "../../../styles";
+import { SectionNarrow, HeadingLine, Para1, respond } from "../../../styles";
 import { BsGem, BsClockHistory, BsGeoAlt } from "react-icons/bs";
 
 export default function RouteComponent() {
@@ -9,7 +9,7 @@ export default function RouteComponent() {
             <Article>
                 <Holder>
                     <Headline>
-                        <Heading2>Openingstijden</Heading2>
+                        <HeadingLine>Openingstijden</HeadingLine>
                     </Headline>
                     <Table>
                         <div>
@@ -44,7 +44,7 @@ export default function RouteComponent() {
                 </Holder>
                 <Holder>
                     <Headline>
-                        <Heading2>Route</Heading2>
+                        <HeadingLine>Route</HeadingLine>
                     </Headline>
                     <Map>
                         <iframe

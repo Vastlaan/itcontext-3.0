@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { respond, Heading2, Para1 } from "../../../styles";
+import { respond, HeadingLine, Para1 } from "../../../styles";
 import { RiMapPinLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 
 export default function ContactComponent() {
     return (
         <Contact>
-            <Heading2>Contact</Heading2>
+            <HeadingLine color="#f6f9ff">Contact</HeadingLine>
             <Para1>Wij werken van maandag t/m vrijdag 08:00 - 18:00</Para1>
             <a href="https://www.google.com/maps/place/IT+Context/@52.5251571,4.9668958,15z/data=!4m2!3m1!1s0x0:0x8987b357489b4cd3?sa=X&ved=2ahUKEwjV6JL_wrHtAhUGqaQKHQSCCkMQ_BIwKXoECDYQBQ">
                 <Field3>
@@ -45,10 +45,14 @@ const Contact = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 4.7rem;
-    padding: 4.7rem 2.7rem;
+    padding: 4.7rem 1.9rem;
     align-items: flex-start;
 
     ${() => respond("l", "grid-column: 1/2; align-items: stretch;")}
+
+    h2 {
+        margin-bottom: 2.7rem;
+    }
 
     p {
         margin-bottom: 2.7rem;

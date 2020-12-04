@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Confirmation from "../../utils/confirmation";
-import { respond, Heading2, Para1, ButtonEmpty } from "../../../styles";
+import { respond, HeadingLine, Para1, ButtonEmpty } from "../../../styles";
 
 export default function FormComponent({ submitContactForm }) {
     const [name, setName] = useState("");
@@ -46,7 +46,7 @@ export default function FormComponent({ submitContactForm }) {
 
     return (
         <Form onSubmit={submitContactForm}>
-            <Heading2>Formulier</Heading2>
+            <HeadingLine color="#f6f9ff">Formulier</HeadingLine>
             <Para1>
                 Neem contact met ons mee. Wij zijn je graag van dienst!
             </Para1>
@@ -130,7 +130,11 @@ const Form = styled.form`
     grid-row: 2/3;
     display: flex;
     flex-direction: column;
-    padding: 2.7rem;
+    padding: 2.7rem 1.9rem;
+
+    h2 {
+        margin-bottom: 2.7rem;
+    }
 
     ${() =>
         respond(
@@ -157,7 +161,7 @@ const Field = styled.div`
     margin-bottom: 1.9rem;
 
     label {
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => p.theme.white};
         font-size: 1.9rem;
     }
     input,

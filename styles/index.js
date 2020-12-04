@@ -17,7 +17,7 @@ import {
     LinkB,
     LinkA,
 } from "./buttons";
-import { Heading1, Heading2, Heading3 } from "./headings";
+import { Heading1, Heading2, Heading3, HeadingLine } from "./headings";
 import { ParaLine, Para1, Para2 } from "./paragraphs";
 
 export {
@@ -40,6 +40,7 @@ export {
     Heading1,
     Heading2,
     Heading3,
+    HeadingLine,
     ParaLine,
     Para1,
     Para2,

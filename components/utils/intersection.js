@@ -7,7 +7,7 @@ import {
     Content,
     ButtonPrimary,
     Para1,
-    Heading2,
+    HeadingLine,
 } from "../../styles";
 
 function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
@@ -21,7 +21,7 @@ function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
                     }}
                 >
                     <Info>
-                        <Heading2 color={theme.white}>{header}</Heading2>
+                        <HeadingLine color={theme.white}>{header}</HeadingLine>
                         <Para1 color={theme.white}>{para}</Para1>
                     </Info>
                     <Buttons>
@@ -47,6 +47,18 @@ export default withTheme(Section4);
 
 const Bulk = styled.div`
     background-color: ${(p) => p.theme.black};
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 15rem;
+        height: 15rem;
+        background-color: ${(p) => p.theme.primary};
+        clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
+    }
 `;
 const Info = styled.div`
     grid-column: 1/4;
@@ -58,7 +70,7 @@ const Info = styled.div`
 
     ${() => respond("m", "grid-column: 1/3;")}
 
-    h1 {
+    h2 {
         margin-bottom: 2.7rem;
         max-width: 100rem;
     }

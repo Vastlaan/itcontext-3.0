@@ -6,7 +6,7 @@ import {
     SectionWide,
     Content,
     Heading3,
-    Heading2,
+    HeadingLine,
     LinkB,
 } from "../../../styles";
 import { FaChevronRight } from "react-icons/fa";
@@ -18,7 +18,7 @@ export default function ServicesComponent() {
                 <Content>
                     <Layout>
                         <Card1>
-                            <Heading2>Web Development</Heading2>
+                            <HeadingLine>Web Development</HeadingLine>
                             <Heading3>Diensten</Heading3>
                             <ul>
                                 <Link href="/diensten/webdesign">
@@ -60,7 +60,9 @@ export default function ServicesComponent() {
                             </ul>
                         </Card1>
                         <Card2>
-                            <Heading2>Online Marketing</Heading2>
+                            <HeadingLine color="white">
+                                Online Marketing
+                            </HeadingLine>
                             <Heading3>Advertenties</Heading3>
                             <ul>
                                 <Link href="/diensten/ads">
