@@ -22,8 +22,8 @@ export default function Summary() {
                     </Para1>
                 </Text1>
                 <Buttons>
-                    <Link href="/projekten">
-                        <ButtonEmpty>Projekten</ButtonEmpty>
+                    <Link href="/projecten">
+                        <ButtonEmpty>Projecten</ButtonEmpty>
                     </Link>
                     <Link href="/contact">
                         <ButtonFull>Bezoekadres</ButtonFull>

@@ -15,7 +15,11 @@ export default function Card({ data }) {
                 {data.price
                     .split(",")
                     .map((p, i) =>
-                        i === 1 ? <sup>{p}</sup> : <strong>{p},</strong>
+                        i === 1 ? (
+                            <sup key={`key-${p}-l-${i}`}>{p}</sup>
+                        ) : (
+                            <strong key={`key-${p}-l-${i}`}>{p},</strong>
+                        )
                     )}
             </Price>
             <Disclaimer>
@@ -39,7 +43,7 @@ const Layout = styled.div`
     padding: 4.7rem 1.9rem;
     border: 1px solid ${(p) => p.theme.black};
     min-width: 33rem;
-    max-width: 45rem;
+    max-width: 55rem;
     position: relative;
 
     &:after {

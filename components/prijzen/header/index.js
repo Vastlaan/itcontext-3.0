@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styled, { withTheme } from "styled-components";
 import {
@@ -10,12 +11,20 @@ import {
     Heading3,
     ParaLine,
     ButtonEmpty,
+    PageNav,
 } from "../../../styles";
 
 function HeaderComponent(props) {
     return (
         <Header>
             <Content>
+                <PageNav>
+                    <p>
+                        <Link href="/">Voorpagina</Link>
+                        {" > "}
+                        <Link href="/prijzen">Prijzen</Link>
+                    </p>
+                </PageNav>
                 <Grid2>
                     <Info>
                         <Heading1 color={props.theme.white}>
@@ -80,14 +89,14 @@ const Info = styled.div`
     }
 `;
 const Banner = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
     padding: 6.7rem 2.7rem;
 
-    ${() => respond("m", "align-items: center;")}
+    ${() => respond("m", "align-items: center;display: flex;")}
 
     h1 {
         margin-bottom: 2.7rem;

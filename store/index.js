@@ -1,13 +1,14 @@
 import React from "react";
+import { data } from "../lib/diensten";
 
 export const initialState = {
-    isMenuOpen: false,
+    diensten: data || [],
 };
 
 export function reducer(store, action) {
     switch (action.type) {
-        case "switchMenu": // this action doesn't require payload as its based on previous value of the state
-            return { ...store, isMenuOpen: !store.isMenuOpen };
+        case "test": // this action doesn't require payload as its based on previous value of the state
+            return { ...store, ...action.payload };
         default:
             return { ...store };
     }

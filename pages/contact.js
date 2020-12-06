@@ -10,11 +10,11 @@ export default function Contact() {
     return (
         <Layout>
             <Head>
-                <title>Contact</title>
-                <meta charSet="utf-8" />
-                <link rel="icon" href="/favicon.ico" />
-
-                <meta name="theme-color" content="#0F284E" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <title>Contact IT Context</title>
                 <meta
                     name="description"
                     content="Neem contact met ons mee via onze website. Heb je een vraag over een van ons dienst? Vermeld dan het in onderstaand formulier of bel 06 82 30 70 51"
@@ -22,14 +22,11 @@ export default function Contact() {
                 />
                 <link rel="apple-touch-icon" href="/logo192.png" />
 
-                <link rel="cannonical" href="https://itcontext.nl" />
+                <link rel="cannonical" href="https://itcontext.nl/contact" />
 
                 <meta property="og:type" content="article" />
 
-                <meta
-                    property="og:title"
-                    content="Contact IT Context Web Design Studio"
-                />
+                <meta property="og:title" content="Contact IT Context" />
 
                 <meta
                     property="og:description"
@@ -38,7 +35,10 @@ export default function Contact() {
 
                 <meta property="og:image" content="/OGImageHomepage.png" />
 
-                <meta property="og:url" content="https://itcontext.nl" />
+                <meta
+                    property="og:url"
+                    content="https://itcontext.nl/contact"
+                />
 
                 <meta property="og:site_name" content="Contact IT Context" />
             </Head>

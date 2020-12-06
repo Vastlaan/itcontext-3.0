@@ -99,8 +99,9 @@ const Heading = styled.div`
     justify-self: center;
     grid-row: auto;
     grid-column: 1/-1;
+    text-align: center;
 
-    ${() => respond("xl", "grid-column: 2/3; grid-row: 1/2;")}
+    ${() => respond("xl", "grid-column: 2/3; grid-row: 1/2;text-align: left;")}
 `;
 
 const P1 = styled(Para1)`
@@ -108,13 +109,19 @@ const P1 = styled(Para1)`
     margin: 4.7rem auto;
     grid-row: auto;
     grid-column: 1/-1;
-    ${() => respond("xl", "grid-column: 3/4; grid-row: 1/2;")}
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    ${() => respond("xl", "grid-column: 3/4; grid-row: 1/2; ")}
 `;
 const P2 = styled(Para1)`
     justify-self: center;
     margin: 4.7rem auto;
     grid-row: auto;
     grid-column: 1/-1;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
     ${() => respond("xl", "grid-column: 3/4; grid-row: 2/3;")}
 `;
 const P3 = styled(Para1)`
@@ -122,6 +129,9 @@ const P3 = styled(Para1)`
     margin: 4.7rem auto;
     grid-row: auto;
     grid-column: 1/-1;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
     ${() => respond("xl", "grid-column: 1/2; grid-row: 3/4;")}
 `;
 const P4 = styled(Para1)`
@@ -129,6 +139,9 @@ const P4 = styled(Para1)`
     margin: 4.7rem auto;
     grid-row: auto;
     grid-column: 1/-1;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
     ${() => respond("xl", "grid-column: 1/2; grid-row: 6/7;")}
 `;
 const Image = styled.div`
@@ -138,6 +151,7 @@ const Image = styled.div`
     cursor: pointer;
     transition: all 0.3s;
     border-radius: 3px;
+    border: 5px solid ${(p) => p.theme.primary};
 
     &:hover {
         position: relative;

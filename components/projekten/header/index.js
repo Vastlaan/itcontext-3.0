@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styled, { withTheme } from "styled-components";
 import {
@@ -9,16 +10,24 @@ import {
     Heading1,
     ParaLine,
     ButtonEmpty,
+    PageNav,
 } from "../../../styles";
 
 function HeaderDiensten(props) {
     return (
         <Header style={{ marginBottom: "4.7rem" }}>
             <Content>
+                <PageNav>
+                    <p>
+                        <Link href="/">Voorpagina</Link>
+                        {" > "}
+                        <Link href="/projecten">Projecten</Link>
+                    </p>
+                </PageNav>
                 <Grid2>
                     <Info>
                         <Heading1 color={props.theme.white}>
-                            {"Wat kunnen wij voor u betekenen?"
+                            {"Ontworpen met passie en creativiteit"
                                 .split(" ")
                                 .map((w, i, a) =>
                                     i !== a.length - 1 ? (
@@ -29,9 +38,10 @@ function HeaderDiensten(props) {
                                 )}
                         </Heading1>
                         <ParaLine>
-                            Onderscheid je van de concurrentie. We ontwerpen
-                            prachtige en unieke websites en helpen je met het
-                            creëren van waardevolle inhoud.
+                            Elegante en gestructureerde websites, die je bedrijf
+                            vertegenwoordigen in een moderne en chique stijl. We
+                            maken het eenvoudig om te navigeren en gemakkelijk
+                            te gebruiken.{" "}
                         </ParaLine>
 
                         <ButtonEmpty

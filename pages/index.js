@@ -12,11 +12,11 @@ export default function LandingPage() {
     return (
         <Layout>
             <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
                 <title>IT Context Web Design Studio</title>
-                <meta charSet="utf-8" />
-                <link rel="icon" href="/favicon.ico" />
-
-                <meta name="theme-color" content="#0F284E" />
                 <meta
                     name="description"
                     content="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteitverhouding. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"

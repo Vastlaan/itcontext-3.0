@@ -64,7 +64,7 @@ const Info = styled.div`
     margin: 6.8rem 1.9rem;
 
     h1 {
-        margin-bottom: 2.7rem;
+        margin-bottom: 4.7rem;
     }
     p {
         margin-bottom: 4.7rem;

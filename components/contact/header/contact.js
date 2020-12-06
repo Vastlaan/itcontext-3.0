@@ -7,7 +7,7 @@ export default function ContactComponent() {
     return (
         <Contact>
             <HeadingLine color="#f6f9ff">Contact</HeadingLine>
-            <Para1>Wij werken van maandag t/m vrijdag 08:00 - 18:00</Para1>
+            <Para1>Wij werken van maandag t/m vrijdag 09:00 - 17:00</Para1>
             <a href="https://www.google.com/maps/place/IT+Context/@52.5251571,4.9668958,15z/data=!4m2!3m1!1s0x0:0x8987b357489b4cd3?sa=X&ved=2ahUKEwjV6JL_wrHtAhUGqaQKHQSCCkMQ_BIwKXoECDYQBQ">
                 <Field3>
                     <RiMapPinLine />
@@ -51,11 +51,11 @@ const Contact = styled.div`
     ${() => respond("l", "grid-column: 1/2; align-items: stretch;")}
 
     h2 {
-        margin-bottom: 2.7rem;
+        margin-bottom: 4.7rem;
     }
 
     p {
-        margin-bottom: 2.7rem;
+        margin-bottom: 6.7rem;
     }
 `;
 const Field3 = styled.button`

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import { respond, NavLink } from "../../styles";
-import { BsSearch, BsChevronDown } from "react-icons/bs";
+import { BsSearch } from "react-icons/bs";
 
 export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
     return (
@@ -16,8 +16,8 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
                 <NavLink>Prijzen</NavLink>
             </Link>
 
-            <Link href="/projekten">
-                <NavLink>Projekten</NavLink>
+            <Link href="/projecten">
+                <NavLink>Projecten</NavLink>
             </Link>
 
             <Link href="/contact">
@@ -25,10 +25,6 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
             </Link>
             <Box onClick={() => setIsSearch((prevState) => !prevState)}>
                 <BsSearch />
-            </Box>
-            <Box>
-                <span>NL</span>
-                <BsChevronDown />
             </Box>
             <Search isSearch={isSearch}>
                 <input type="text" />

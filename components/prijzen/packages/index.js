@@ -33,6 +33,7 @@ const Layout = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4.7rem;
+    justify-items: center;
 
     ${() => respond("s", "grid-template-columns: repeat(2, 1fr);")}
     ${() =>

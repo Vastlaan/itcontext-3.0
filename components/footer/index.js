@@ -23,16 +23,41 @@ const data = {
             id: 2,
             header: "Diensten",
             links: [
-                "Websites Ontwerpen",
-                "SEO Optimisation",
-                "Online Marketing",
-                "particuleren",
+                {
+                    name: "Diensten",
+                    url: "/diensten",
+                },
+                {
+                    name: "Prijzen",
+                    url: "/prijzen",
+                },
+                {
+                    name: "Projecten",
+                    url: "/projecten",
+                },
+                {
+                    name: "Contact",
+                    url: "/contact",
+                },
             ],
         },
         {
             id: 4,
             header: "Privacy",
-            links: ["cookies", "Voorwaarden", "Privacy policy", "Contact"],
+            links: [
+                {
+                    name: "Cookies Policy",
+                    url: "/cookies",
+                },
+                {
+                    name: "Algemene Voorwaarden",
+                    url: "/voorwaarden",
+                },
+                {
+                    name: "Sitemap",
+                    url: "/sitemap.xml",
+                },
+            ],
         },
     ],
     offerHeader: "Blijf op de hoogte",
@@ -88,12 +113,12 @@ export default function Footer2() {
                                     {section.links.map((link, i) => {
                                         return (
                                             <Link
-                                                key={`${link}-${i}-${Math.random(
-                                                    100
-                                                )}`}
-                                                href={`/${link}`}
+                                                key={`${
+                                                    link.name
+                                                }-${i}-${Math.random(100)}`}
+                                                href={`${link.url}`}
                                             >
-                                                {link}
+                                                {link.name}
                                             </Link>
                                         );
                                     })}
@@ -252,8 +277,12 @@ const Icons = styled.div`
 `;
 const Offer = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 2.7rem;
+    grid-column: 1/-1;
+    flex-direction: column;
+
+    ${() => respond("m", "flex-directon: row; align-items: center;")}
 
     h3 {
         font-weight: 600;
@@ -264,11 +293,13 @@ const Offer = styled.div`
     }
 
     input {
-        max-widht: 35rem;
+        max-width: 35rem;
         border: none;
         padding: 1.45rem 1.9rem;
         border-radius: 3px;
-        margin: 2.7rem 1.3rem;
+        margin: 2.7rem 0rem;
+
+        ${() => respond("m", "margin: 2.7rem 1.3rem;")}
 
         &:active,
         :focus {

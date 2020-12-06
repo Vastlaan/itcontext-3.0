@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../store";
+import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import { respond, SectionNarrow, HeadingLine } from "../../../styles";
 
 export default function PricesComponent() {
+    const { store, dispatch } = useContext(Context);
+    const { diensten } = store;
+
     return (
         <SectionNarrow>
             <Layout>
@@ -12,36 +17,19 @@ export default function PricesComponent() {
                         Overige <span>Prijzen</span>
                     </HeadingLine>
                     <Menu>
-                        <li>
-                            Websites ontwerpen en ontwikkelen{" "}
-                            <span>va. &euro;199/project</span>
-                        </li>
-                        <li>
-                            Webapplicaties ontwerpen en ontwikkelen{" "}
-                            <span>prijs op aanvraag</span>
-                        </li>
-                        <li>
-                            Webshops oprichten <span>prijs op aanvraag</span>
-                        </li>
-                        <li>
-                            Professionele e-mailadresen{" "}
-                            <span>va. &euro;5/maand</span>
-                        </li>
-                        <li>
-                            Hosting <span>va. &euro;5/maand</span>
-                        </li>
-                        <li>
-                            Content Managment Systeem{" "}
-                            <span>va. &euro;5/maand</span>
-                        </li>
-                        <li>
-                            Google Ads (excl. ads tegoed){" "}
-                            <span>va. &euro;99/maand</span>
-                        </li>
-                        <li>
-                            Facebook Ads (excl. ads tegoed){" "}
-                            <span>va. &euro;99/maand</span>
-                        </li>
+                        {diensten.map((dienst, i) => {
+                            return (
+                                <Link
+                                    key={`dienst-${dienst.path}`}
+                                    href={`/diensten/${dienst.path}`}
+                                >
+                                    <li>
+                                        {dienst.name}{" "}
+                                        <span>va. &euro;{dienst.price}</span>
+                                    </li>
+                                </Link>
+                            );
+                        })}
                     </Menu>
                 </Main>
                 <Logo>
@@ -86,10 +74,16 @@ const Menu = styled.ul`
         display: grid;
         grid-template-columns: 1fr 18rem;
         margin: 1.9rem 0;
+        transition: all 0.3s;
 
         span {
             text-align: right;
             font-weight: 800;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
 `;

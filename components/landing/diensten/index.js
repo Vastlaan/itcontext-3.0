@@ -92,10 +92,10 @@ const Service = styled.div`
     align-items: center;
     margin-bottom: 4.7rem;
     border: 1px solid ${(p) => p.theme.silver};
-    padding: 2.7rem 1.9rem;
+    padding: 4.7rem 1.9rem;
     position: relative;
 
-    h1 {
+    h3 {
         margin-bottom: 2.7rem;
         text-align: center;
     }

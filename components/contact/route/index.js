@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionNarrow, HeadingLine, Para1, respond } from "../../../styles";
-import { BsGem, BsClockHistory, BsGeoAlt } from "react-icons/bs";
+import { SectionNarrow, HeadingLine, respond } from "../../../styles";
 
 export default function RouteComponent() {
     return (
@@ -14,23 +13,23 @@ export default function RouteComponent() {
                     <Table>
                         <div>
                             <p>Maandag</p>
-                            <p>08:00 - 18:00</p>
+                            <p>09:00 - 17:00</p>
                         </div>
                         <div>
                             <p>Dinsdag</p>
-                            <p>08:00 - 18:00</p>
+                            <p>09:00 - 17:00</p>
                         </div>
                         <div>
                             <p>Woensdag</p>
-                            <p>08:00 - 18:00</p>
+                            <p>09:00 - 17:00</p>
                         </div>
                         <div>
                             <p>Donderdag</p>
-                            <p>08:00 - 18:00</p>
+                            <p>09:00 - 17:00</p>
                         </div>
                         <div>
                             <p>Vrijdag</p>
-                            <p>08:00 - 18:00</p>
+                            <p>09:00 - 17:00</p>
                         </div>
                         <div>
                             <p>Zaterdag</p>

@@ -24,18 +24,21 @@ export default function FormComponent({ submitContactForm }) {
             email,
             msg,
         };
-        console.log(data);
 
-        fetch("/api/contact-form-submition", {
+        fetch("/api/submitContactForm", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
         })
-            .then((res) => res.json())
+            .then((res) => {
+                console.log(res);
+                return res.json();
+            })
             .then((d) => {
-                if (d === "Sucess") {
+                console.log(d);
+                if (d.msg === "Sucess") {
                     return console.log("Done. Set confirmation.");
                 }
             })

@@ -7,6 +7,8 @@ import {
     SectionWide,
     Content,
     Grid2,
+    Grid2XL,
+    PageNav,
 } from "./containers";
 import {
     ButtonFull,
@@ -37,6 +39,8 @@ export {
     SectionWide,
     Content,
     Grid2,
+    Grid2XL,
+    PageNav,
     Heading1,
     Heading2,
     Heading3,

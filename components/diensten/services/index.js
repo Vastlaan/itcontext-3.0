@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import {
@@ -9,6 +9,7 @@ import {
     HeadingLine,
     LinkB,
 } from "../../../styles";
+
 import { FaChevronRight } from "react-icons/fa";
 
 export default function ServicesComponent() {
@@ -21,25 +22,25 @@ export default function ServicesComponent() {
                             <HeadingLine>Web Development</HeadingLine>
                             <Heading3>Diensten</Heading3>
                             <ul>
-                                <Link href="/diensten/webdesign">
+                                <Link href="/diensten/websites-ontwerpen">
                                     <LinkB color="#18191F">
                                         <FaChevronRight />
                                         Websites Ontwerpen en Ontwikkelen
                                     </LinkB>
                                 </Link>
-                                <Link href="/diensten/webapplicaties">
+                                <Link href="/diensten/webapplicaties-ontwerpen">
                                     <LinkB color="#18191F">
                                         <FaChevronRight />
                                         Webapplicaties Ontwerpen en Ontwikkelen
                                     </LinkB>
                                 </Link>
-                                <Link href="/diensten/webshops">
+                                <Link href="/diensten/webshops-oprichten">
                                     <LinkB color="#18191F">
                                         <FaChevronRight />
                                         Webshops oprichten
                                     </LinkB>
                                 </Link>
-                                <Link href="/diensten/emails">
+                                <Link href="/diensten/emails-aanmaken">
                                     <LinkB color="#18191F">
                                         <FaChevronRight />
                                         Professionele e-mailadressen
@@ -65,13 +66,13 @@ export default function ServicesComponent() {
                             </HeadingLine>
                             <Heading3>Advertenties</Heading3>
                             <ul>
-                                <Link href="/diensten/ads">
+                                <Link href="/diensten/online-marketing">
                                     <LinkB>
                                         <FaChevronRight />
                                         Google Ads Campagnes oprichten
                                     </LinkB>
                                 </Link>
-                                <Link href="/diensten/ads">
+                                <Link href="/diensten/online-marketing">
                                     <LinkB>
                                         <FaChevronRight />
                                         Facebook Ads Campagnes oprichten

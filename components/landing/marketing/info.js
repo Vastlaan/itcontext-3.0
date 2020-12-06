@@ -20,7 +20,7 @@ function Info(props) {
                 kunnen vinden en bouwen een solide basis op om hen te helpen bij
                 het kiezen van je producten en diensten.
             </Para1>
-            <Link href="/online-marketing">
+            <Link href="/diensten/online-marketing">
                 <ButtonEmpty color={props.theme.primary}>
                     Online Marketing
                 </ButtonEmpty>
@@ -39,9 +39,9 @@ const Layout = styled.div`
     justify-content: flex-start;
 
     h1 {
-        margin-bottom: 2.7rem;
+        margin-bottom: 4.7rem;
     }
     p {
-        margin-bottom: 4.7rem;
+        margin-bottom: 6.7rem;
     }
 `;
