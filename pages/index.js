@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import styled from "styled-components";
+
 import Layout from "../globals/layout";
 import Header from "../components/landing/header";
 import Marketing from "../components/landing/marketing";

@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import styled from "styled-components";
 import { respond, ButtonFull } from "../../../styles";
 
 export default function Card({ data }) {
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 100,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
     return (
-        <Layout color={data.color}>
+        <Layout ref={target} color={data.color}>
             <Icon>{data.icon}</Icon>
             <Heading color={data.color}>
                 <span>{data.name} </span>

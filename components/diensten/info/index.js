@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import styled from "styled-components";
 import { respond, SectionWide, Content, Para1 } from "../../../styles";
 import Poster from "./poster";
 
 export default function ServicesComponent() {
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 100,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
     return (
-        <SectionWide>
+        <SectionWide ref={target}>
             <Background>
                 <Content>
                     <Layout>

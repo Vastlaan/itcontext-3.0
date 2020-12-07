@@ -1,4 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Context } from "../../../store";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,9 +10,23 @@ import { respond, SectionNarrow, HeadingLine } from "../../../styles";
 export default function PricesComponent() {
     const { store, dispatch } = useContext(Context);
     const { diensten } = store;
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 100,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
 
     return (
-        <SectionNarrow>
+        <SectionNarrow ref={target}>
             <Layout>
                 <Main>
                     <HeadingLine>

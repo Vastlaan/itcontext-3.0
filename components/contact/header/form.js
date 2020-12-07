@@ -33,13 +33,11 @@ export default function FormComponent({ submitContactForm }) {
             body: JSON.stringify(data),
         })
             .then((res) => {
-                console.log(res);
                 return res.json();
             })
             .then((d) => {
-                console.log(d);
                 if (d.msg === "Sucess") {
-                    return console.log("Done. Set confirmation.");
+                    return setDisplayConfirmation(true);
                 }
             })
             .catch((e) => console.error(e));

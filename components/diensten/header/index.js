@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import styled, { withTheme } from "styled-components";
@@ -14,8 +16,22 @@ import {
 } from "../../../styles";
 
 function HeaderDiensten(props) {
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 0,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
     return (
-        <Header>
+        <Header ref={target}>
             <Content>
                 <PageNav>
                     <p>

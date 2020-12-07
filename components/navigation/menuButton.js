@@ -25,6 +25,7 @@ const Button = styled.button`
     position: ${(p) => (p.isOpen ? "absolute" : "fixed")};
     top: 2.7rem;
     right: ${(p) => (p.isOpen ? "2.7rem" : "2.7rem")};
+    z-index: 10;
 
     ${() => respond("m", "display: none;")}
 

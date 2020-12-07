@@ -161,8 +161,12 @@ export const NavLink = styled.button`
 
     &:hover {
         &:after {
-            opacity: 1;
-            bottom: 2rem;
+            ${() =>
+                respond(
+                    "m",
+                    `opacity: 1;
+            bottom: 2rem;`
+                )}
         }
     }
 `;

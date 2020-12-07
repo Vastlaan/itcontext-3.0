@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
+import WhatsApp from "../components/utils/whatsapp";
 
 export default function Layout({ children }) {
     return (
@@ -10,6 +11,7 @@ export default function Layout({ children }) {
             <Navigation />
             {children}
             <Footer />
+            <WhatsApp />
         </Container>
     );
 }

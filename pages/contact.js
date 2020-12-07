@@ -56,8 +56,8 @@ export default function Contact() {
                 para="Duik in ons bedrijf en leer ons beter kennen. Wees op de hoogte van onze aanbiediengen en maak een kennis met onze nieuweste prestaties. Wij zijn jong bedrijf met grote ambities"
                 btn1="Facebook"
                 btn2="LinkedIn"
-                link1="https://facebook.com"
-                link2="https://linkedin.com"
+                link1="https://www.facebook.com/Web-Design-Studio-102496775046062"
+                link2="https://www.linkedin.com/company/it-context"
             />
 
             <Route />

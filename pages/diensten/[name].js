@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Head from "next/head";
 import styled from "styled-components";
 import {
     respond,
+    PageNav,
     SectionNarrow,
     Grid2,
     Heading1,
@@ -11,21 +14,36 @@ import {
     ButtonEmpty,
 } from "../../styles";
 import Layout from "../../globals/layout";
+import Banner from "../../components/utils/banner";
 import { data } from "../../lib/diensten";
 import { BsCheck } from "react-icons/bs";
 
 export default function Dienst({ serviceData }) {
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 0,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
     return (
-        <Layout>
+        <Layout ref={target}>
             <Head>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>Diensten IT Context</title>
+                <title>{serviceData.name}</title>
                 <meta
                     name="description"
-                    content="Wij realiseren zowel kleine als grote opdrachten, van eenvoudige maar krachtige websites tot complexe webapplicaties, e-mailadressen, Content Managment Systems en veel meer."
+                    content={serviceData.para1}
                     data-react-helmet="true"
                 />
                 <link rel="apple-touch-icon" href="/logo192.png" />
@@ -34,24 +52,32 @@ export default function Dienst({ serviceData }) {
 
                 <meta property="og:type" content="article" />
 
-                <meta property="og:title" content="Diensten IT" />
+                <meta property="og:title" content={serviceData.name} />
 
-                <meta
-                    property="og:description"
-                    content="Wij realiseren zowel kleine als grote opdrachten, van eenvoudige maar krachtige websites tot complexe webapplicaties, e-mailadressen, Content Managment Systems en veel meer."
-                />
+                <meta property="og:description" content={serviceData.para1} />
 
                 <meta property="og:image" content="/OGImageHomepage.png" />
 
                 <meta
                     property="og:url"
-                    content="https://itcontext.nl/diensten"
+                    content={`https://itcontext.nl/diensten/${serviceData.path}`}
                 />
 
-                <meta property="og:site_name" content="Diensten IT Context" />
+                <meta property="og:site_name" content={serviceData.name} />
             </Head>
             <Background>
                 <SectionNarrow>
+                    <PageNav>
+                        <p>
+                            <Link href="/">Voorpagina</Link>
+                            {" > "}
+                            <Link href="/diensten">Diensten</Link>
+                            {" > "}
+                            <Link href={`/diensten/${serviceData.path}`}>
+                                {serviceData.name}
+                            </Link>
+                        </p>
+                    </PageNav>
                     <Grid2>
                         <Info>
                             <Heading1 color="#f6f9ff">
@@ -83,7 +109,7 @@ export default function Dienst({ serviceData }) {
                             <li>
                                 <br />
                             </li>
-                            <li>
+                            <li style={{ margin: "auto 0 0 0" }}>
                                 <span>
                                     Prijzen al vanaf: &euro;{serviceData.price}
                                 </span>
@@ -92,6 +118,7 @@ export default function Dienst({ serviceData }) {
                     </Grid2>
                 </SectionNarrow>
             </Background>
+            <Banner />
         </Layout>
     );
 }
@@ -134,7 +161,6 @@ const List = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     ${() => respond("m", "padding: 0 2.7rem;")}
 
@@ -145,7 +171,7 @@ const List = styled.ul`
         align-items: center;
         margin: 1.9rem 0;
 
-        ${() => respond("m", "margin: 0;")}
+        ${() => respond("m", "margin: .9rem 0;")}
 
         svg {
             margin-right: 1.9rem;

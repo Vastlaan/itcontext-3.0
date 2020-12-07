@@ -46,7 +46,6 @@ const Buttons = styled.div`
     transform: ${(p) => (p.isOpen ? "translateY(0)" : "translateY(-200%)")};
     flex-direction: column;
     transition: all 0.3s;
-    z-index: 1;
 
     ${(p) =>
         respond(
@@ -64,15 +63,16 @@ const Buttons = styled.div`
         )}
 
     button {
-        margin: 2.7rem 1.9rem;
+        padding: 2.7rem 1.9rem;
         text-transform: uppercase;
-
-        ${() => respond("m", "margin: 0 1.9rem; text-transform: capitalize;")}
+        margin: 0;
+        background-color: ${(p) => p.theme.black};
+        ${() => respond("m", "padding: 0 1.9rem; text-transform: capitalize;")};
     }
 `;
 const Box = styled.button`
     min-width: 9rem;
-    padding: 0.9rem 2.7rem;
+    padding: 0rem 2.7rem;
     border: 2px solid ${(p) => p.theme.black};
     background-color: ${(p) => p.theme.black};
     display: none;

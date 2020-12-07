@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styled from "styled-components";
 import {
     respond,
@@ -25,9 +27,23 @@ export default function Display({
     p4,
 }) {
     const [full, setFull] = useState(null);
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 0,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
 
     return (
-        <SectionNarrow>
+        <SectionNarrow ref={target}>
             <Layout>
                 <Heading>
                     <Heading1 color="white">

@@ -1,4 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
@@ -16,9 +18,23 @@ import {
 
 export default function Banner() {
     const { store, dispatch } = useContext(Context);
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 100,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
 
     return (
-        <SectionWide>
+        <SectionWide ref={target}>
             <Background>
                 <Content>
                     <Grid2XL>
@@ -155,12 +171,22 @@ const List = styled.ul`
         font-size: 1.9rem;
         text-transform: uppercase;
         color: ${(p) => p.theme.white};
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+        margin: 0.9rem auto;
+
+        ${() => respond("m", "margin: 0.3rem auto;")}
 
         span {
             color: ${(p) => p.theme.primary};
         }
         strong {
             font-weight: 400;
+        }
+
+        &:hover {
+            color: ${(p) => p.theme.silver};
         }
     }
 `;

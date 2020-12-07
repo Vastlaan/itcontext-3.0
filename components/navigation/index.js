@@ -14,17 +14,15 @@ export default function Navigation() {
 
     return (
         <Container>
-            <S>
-                <Logo />
+            <Logo />
 
-                <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+            <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
-                <Buttons
-                    isOpen={isOpen}
-                    isSearch={isSearch}
-                    setIsSearch={setIsSearch}
-                />
-            </S>
+            <Buttons
+                isOpen={isOpen}
+                isSearch={isSearch}
+                setIsSearch={setIsSearch}
+            />
         </Container>
     );
 }
@@ -36,15 +34,10 @@ const Container = styled.nav`
     left: 0;
     width: 100%;
     display: flex;
-`;
-
-const S = styled.div`
+    padding: 0rem 2.7rem;
     display: flex;
     justify-content: flex-start;
-    padding: 0rem 2.7rem;
     background-color: ${(p) => p.theme.black};
-    z-index: 9;
-    width: 100%;
 `;
 
 const MenuIcon = styled.button`

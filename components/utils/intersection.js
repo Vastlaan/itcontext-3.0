@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styled, { withTheme } from "styled-components";
 import {
     respond,
@@ -11,8 +13,22 @@ import {
 } from "../../styles";
 
 function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
+    const target = useRef();
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(target.current, {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            scrollTrigger: {
+                trigger: target.current,
+                toggleActions: "restart none none none",
+            },
+        });
+    }, []);
     return (
-        <SectionWide>
+        <SectionWide ref={target}>
             <Bulk>
                 <Content
                     style={{

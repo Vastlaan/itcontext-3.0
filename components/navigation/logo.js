@@ -21,8 +21,11 @@ export default function LogoComponent() {
 }
 
 const Logo = styled.div`
+    flex: 1;
     display: flex;
     align-items: center;
     padding: 0.9rem 1.9rem;
     cursor: pointer;
+    z-index: 9;
+    background-color: ${(p) => p.theme.black};
 `;

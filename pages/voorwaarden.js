@@ -438,7 +438,7 @@ export default function Voorwaarden() {
 
 const Container = styled.section`
     padding: 1.9rem;
-    padding-top: 10rem;
+    padding-top: 15rem;
     background-color: ${(props) => props.theme.black};
 `;
 const Main = styled.section`
@@ -451,6 +451,7 @@ const Main = styled.section`
         color: ${(props) => props.theme.primary};
         text-align: center;
         font-weight: 900;
+        margin: 1.9rem auto;
     }
     h2 {
         color: ${(props) => props.theme.primary};
