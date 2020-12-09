@@ -1,15 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styled from "styled-components";
-import {
-    respond,
-    SectionNarrow,
-    Heading1,
-    Para1,
-    Social,
-} from "../../../styles";
-import { MdClose } from "react-icons/md";
+import { respond, SectionNarrow, Heading1, Para1 } from "../../../styles";
 
 export default function Display({
     imgsm1,
@@ -25,8 +18,9 @@ export default function Display({
     p2,
     p3,
     p4,
+    setFull,
+    full,
 }) {
-    const [full, setFull] = useState(null);
     const target = useRef();
 
     useEffect(() => {
@@ -87,14 +81,6 @@ export default function Display({
                     <img src={imgsm3} alt="website design" />
                 </Image8>
             </Layout>
-            {full && (
-                <Full>
-                    <Social onClick={() => setFull(null)}>
-                        <MdClose />
-                    </Social>
-                    <img src={full} alt="website design" />
-                </Full>
-            )}
         </SectionNarrow>
     );
 }
@@ -244,34 +230,4 @@ const Image8 = styled(Image)`
     grid-row: auto;
 
     ${() => respond("xl", "grid-column: 3/4; grid-row: 6/7;")}
-`;
-
-const Full = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.9);
-
-    button {
-        position: absolute;
-        top: 2.7rem;
-        right: 4.7rem;
-        border: 1px solid snow;
-
-        svg {
-            color: snow;
-        }
-    }
-
-    img {
-        max-height: 90%;
-        max-width: 90%;
-        margin: 0 auto;
-    }
 `;

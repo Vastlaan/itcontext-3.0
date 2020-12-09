@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
 import { respond, SectionNarrow, HeadingLine } from "../../../styles";
-import data from "../../../data/packages";
+import data from "../../../lib/packages";
 import Card from "./card";
 
 function PackagesComponent() {

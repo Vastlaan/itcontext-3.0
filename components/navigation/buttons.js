@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
+import search from "../../lib/search";
 import { respond, NavLink } from "../../styles";
 import { BsSearch } from "react-icons/bs";
+import { FaChevronRight } from "react-icons/fa";
 
 export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
+    const [results, setResults] = useState([]);
+
     return (
         <Buttons isOpen={isOpen}>
             <Link href="/diensten">
@@ -23,14 +27,38 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
             <Link href="/contact">
                 <NavLink>Contact</NavLink>
             </Link>
-            <Box onClick={() => setIsSearch((prevState) => !prevState)}>
+            <Box
+                onClick={() => {
+                    setResults([]);
+                    setIsSearch((prevState) => !prevState);
+                }}
+            >
                 <BsSearch />
             </Box>
             <Search isSearch={isSearch}>
-                <input type="text" />
+                <input
+                    type="text"
+                    onChange={(e) => {
+                        if (e.target.value.length > 1) {
+                            return search(e.target.value, setResults);
+                        } else {
+                            return setResults([]);
+                        }
+                    }}
+                />
                 <button>
                     <BsSearch />
                 </button>
+                <ul>
+                    {results.map((r) => (
+                        <Link key={`list-search-${r.path}`} href={r.path}>
+                            <li>
+                                <FaChevronRight />
+                                {r.name}
+                            </li>
+                        </Link>
+                    ))}
+                </ul>
             </Search>
         </Buttons>
     );
@@ -111,6 +139,7 @@ const Search = styled.div`
     background-color: transparent;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     transition: all 0.3s;
     z-index: -1;
 
@@ -155,6 +184,31 @@ const Search = styled.div`
 
         svg {
             font-size: 1.6rem;
+        }
+    }
+
+    ul {
+        width: 100%;
+        margin: 2.7rem auto;
+        list-style: none;
+
+        li {
+            color: ${(p) => p.theme.white};
+            font-size: 1.9rem;
+            cursor: pointer;
+            margin: 0.9rem 0;
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 1.9rem;
+                color: ${(p) => p.theme.primary};
+                margin-right: 0.9rem;
+            }
+
+            &:hover {
+                color: ${(p) => p.theme.silver};
+            }
         }
     }
 `;

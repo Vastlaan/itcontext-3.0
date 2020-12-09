@@ -7,7 +7,7 @@ import Form from "./form";
 import Contact from "./contact";
 import { respond, SectionWide, Content, PageNav } from "../../../styles";
 
-export default function Header() {
+export default function Header({ query }) {
     const target = useRef();
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function Header() {
                 </PageNav>
                 <Layout>
                     <Contact />
-                    <Form />
+                    <Form query={query} />
                 </Layout>
             </Content>
         </SectionWide>

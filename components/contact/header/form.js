@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Confirmation from "../../utils/confirmation";
 import { respond, HeadingLine, Para1, ButtonEmpty } from "../../../styles";
 
-export default function FormComponent({ submitContactForm }) {
+export default function FormComponent({ query }) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
@@ -44,6 +44,18 @@ export default function FormComponent({ submitContactForm }) {
 
         setWarning("");
     }
+
+    useEffect(() => {
+        if (query.package) {
+            setMsg(
+                `Goede dag, Ik ben geintereseerd in eigen website ${query.package} Pakket. Neem aub een contact met mij op. Groeten!`
+            );
+        } else if (query.service) {
+            setMsg(
+                `Goede dag, Ik ben geintereseerd in ${query.service}. Neem aub een contact met mij op. Groeten!`
+            );
+        }
+    }, []);
 
     return (
         <Form onSubmit={submitContactForm}>

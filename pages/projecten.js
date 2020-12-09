@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
 import Head from "next/head";
 import Layout from "../globals/layout";
 import Header from "../components/projekten/header";
 import Display from "../components/projekten/display";
 import Banner from "../components/utils/banner";
+import { MdClose } from "react-icons/md";
+import { Social } from "../styles";
 
 export default function Gallery() {
+    const [full, setFull] = useState(null);
+
     return (
         <Layout>
             <Head>
@@ -21,7 +26,7 @@ export default function Gallery() {
                 />
                 <link rel="apple-touch-icon" href="/logo192.png" />
 
-                <link rel="cannonical" href="https://itcontext.nl/projecten" />
+                <link rel="cannonical" href="https://itcontext.nl/" />
 
                 <meta property="og:type" content="article" />
 
@@ -49,13 +54,15 @@ export default function Gallery() {
                 p3="We analyseren wat er in het hoofd van je klanten gebeurd. Daarom is ons ontwerp erop gericht om je publiek te laten groeien met mogelijk veel nieuwe klanten "
                 p4="We volgen wereldwijde trends en gebruiken de nieuwste en best werkende oplossingen "
                 imgl1="/static/img/gallery-5.jpg"
-                imgl2="/static/img/gallery-1.jpg"
-                imgl3="/static/img/gallery-4.jpg"
+                imgl2="/static/img/gallery-4.jpg"
+                imgl3="/static/img/gallery-1.jpg"
                 imgl4="/static/img/gallery-3.jpg"
-                imgl5="/static/img/gallery-1.jpg"
-                imgsm1="/static/img/gallery-7.jpg"
-                imgsm2="/static/img/gallery-2.jpg"
-                imgsm3="/static/img/gallery-6.jpg"
+                imgl5="/static/img/home-header-2.jpg"
+                imgsm1="/static/img/packages.svg"
+                imgsm2="/static/img/gallery-10.svg"
+                imgsm3="/static/img/gallery-2.jpg"
+                setFull={setFull}
+                full={full}
             />
 
             <Banner />
@@ -71,10 +78,49 @@ export default function Gallery() {
                 imgl3="/static/img/gallery-4.jpg"
                 imgl4="/static/img/gallery-3.jpg"
                 imgl5="/static/img/gallery-1.jpg"
-                imgsm1="/static/img/gallery-7.jpg"
-                imgsm2="/static/img/gallery-6.jpg"
-                imgsm3="/static/img/gallery-2.jpg"
+                imgsm1="/static/img/gallery-10.svg"
+                imgsm2="/static/img/gallery-7.jpg"
+                imgsm3="/static/img/gallery-6.jpg"
+                setFull={setFull}
+                full={full}
             />
+            {full && (
+                <Full>
+                    <Social onClick={() => setFull(null)}>
+                        <MdClose />
+                    </Social>
+                    <img src={full} alt="website design" />
+                </Full>
+            )}
         </Layout>
     );
 }
+const Full = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    button {
+        position: absolute;
+        top: 2.7rem;
+        right: 4.7rem;
+        border: 1px solid snow;
+
+        svg {
+            color: snow;
+        }
+    }
+
+    img {
+        max-height: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+`;

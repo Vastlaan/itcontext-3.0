@@ -46,7 +46,12 @@ export default function Card({ data }) {
                     return <li key={`key-${item}-l-${i}`}>{item}</li>;
                 })}
             </Items>
-            <Link href={data.link}>
+            <Link
+                href={{
+                    pathname: data.link,
+                    query: { package: data.name, service: null },
+                }}
+            >
                 <ButtonFull color={data.color}>{data.btn}</ButtonFull>
             </Link>
         </Layout>

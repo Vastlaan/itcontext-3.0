@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Layout from "../globals/layout";
 import Header from "../components/contact/header";
 import Intersection from "../components/utils/intersection";
@@ -7,6 +8,8 @@ import Intersection2 from "../components/utils/intersection2";
 import Route from "../components/contact/route";
 
 export default function Contact() {
+    const router = useRouter();
+    const query = router.query;
     return (
         <Layout>
             <Head>
@@ -43,7 +46,7 @@ export default function Contact() {
                 <meta property="og:site_name" content="Contact IT Context" />
             </Head>
 
-            <Header />
+            <Header query={query} />
 
             <Intersection2
                 header="Het Bedrijf"
