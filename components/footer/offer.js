@@ -6,7 +6,9 @@ export default function OfferComponent({ offerHeader }) {
     return (
         <Offer>
             <h3>{offerHeader}</h3>
-            <input type="text" placeholder="E-mail" />
+            <label htmlFor="">
+                <input type="text" placeholder="E-mail" />
+            </label>
             <ButtonEmpty color="#c0392b" color2="white">
                 Aanvragen
             </ButtonEmpty>

@@ -25,7 +25,7 @@ export default function Contact() {
                 />
                 <link rel="apple-touch-icon" href="/logo192.png" />
 
-                <link rel="cannonical" href="https://itcontext.nl/contact" />
+                <link rel="cannonical" href="https://itcontext.nl" />
 
                 <meta property="og:type" content="article" />
 

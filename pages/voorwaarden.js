@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import Link from "next/link";
 import Layout from "../globals/layout";
@@ -9,12 +10,51 @@ export default function Voorwaarden() {
 
     return (
         <Layout>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <title>Algemene Voorwaarden IT Context</title>
+                <meta
+                    name="description"
+                    content="Algemene Voorwaarden IT Context"
+                    data-react-helmet="true"
+                />
+                <link rel="apple-touch-icon" href="/logo192.png" />
+
+                <link rel="cannonical" href="https://itcontext.nl/" />
+
+                <meta property="og:type" content="article" />
+
+                <meta
+                    property="og:title"
+                    content="Algemene Voorwaarden IT Context"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Algemene Voorwaarden IT Context"
+                />
+
+                <meta property="og:image" content="/OGImageHomepage.png" />
+
+                <meta
+                    property="og:url"
+                    content="https://itcontext.nl/cookies"
+                />
+
+                <meta
+                    property="og:site_name"
+                    content="Algemene Voorwaarden IT Context"
+                />
+            </Head>
             <Container>
                 <PageNav>
                     <p>
                         <Link href="/">Voorpagina</Link>
                         {" > "}
-                        <Link href="/cookies">Cookies</Link>
+                        <Link href="/voorwaarden">Algenene Voorwaarden</Link>
                     </p>
                 </PageNav>
                 <Main>

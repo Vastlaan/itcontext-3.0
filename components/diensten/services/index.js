@@ -16,6 +16,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 export default function ServicesComponent() {
     const target = useRef();
+    const chevron1 = useRef();
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +29,17 @@ export default function ServicesComponent() {
                 toggleActions: "restart none none none",
             },
         });
+        const tl = gsap.timeline({ repeat: -1 });
+
+        tl.to(chevron1.current, { x: 10, duration: 0.2 })
+            .to(chevron1.current, {
+                x: 0,
+                duration: 0.2,
+            })
+            .to(chevron1.current, {
+                x: 0,
+                duration: 5,
+            });
     }, []);
     return (
         <SectionWide ref={target}>
@@ -39,7 +51,7 @@ export default function ServicesComponent() {
                             <Heading3>Diensten</Heading3>
                             <ul>
                                 <Link href="/diensten/websites-ontwerpen">
-                                    <LinkB color="#18191F">
+                                    <LinkB ref={chevron1} color="#18191F">
                                         <FaChevronRight />
                                         Websites Ontwerpen en Ontwikkelen
                                     </LinkB>

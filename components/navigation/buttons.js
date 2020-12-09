@@ -36,17 +36,19 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
                 <BsSearch />
             </Box>
             <Search isSearch={isSearch}>
-                <input
-                    type="text"
-                    onChange={(e) => {
-                        if (e.target.value.length > 1) {
-                            return search(e.target.value, setResults);
-                        } else {
-                            return setResults([]);
-                        }
-                    }}
-                />
-                <button>
+                <label>
+                    <input
+                        type="text"
+                        onChange={(e) => {
+                            if (e.target.value.length > 1) {
+                                return search(e.target.value, setResults);
+                            } else {
+                                return setResults([]);
+                            }
+                        }}
+                    />
+                </label>
+                <button name="search">
                     <BsSearch />
                 </button>
                 <ul>

@@ -6,6 +6,7 @@ export default function ButtonMenu({ isOpen, setIsOpen }) {
     return (
         <Button
             isOpen={isOpen}
+            name="buttonMenu"
             onClick={() => setIsOpen((prevState) => !prevState)}
         >
             <div></div>

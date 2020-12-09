@@ -22,7 +22,7 @@ export default function Prijzen() {
                 />
                 <link rel="apple-touch-icon" href="/logo192.png" />
 
-                <link rel="cannonical" href="https://itcontext.nl/prijzen" />
+                <link rel="cannonical" href="https://itcontext.nl/" />
 
                 <meta property="og:type" content="article" />
 

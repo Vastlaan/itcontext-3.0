@@ -4,10 +4,10 @@ import styled from "styled-components";
 export default function CopyrightComponent({ copyright }) {
     return (
         <Copyright>
-            <h6>
+            <p>
                 &copy; {new Date().getFullYear()} Copyright{" "}
                 <a href="https://itcontext.nl">IT Context</a> {copyright}
-            </h6>
+            </p>
         </Copyright>
     );
 }
@@ -17,7 +17,7 @@ const Copyright = styled.div`
     widht: 100%;
     padding-bottom: 1.9rem;
 
-    h6 {
+    p {
         font-size: 1.1rem;
         line-height: 1;
         letter-spacing: 0.2rem;

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Layout from "../globals/layout";
 import styled from "styled-components";
 import Link from "next/link";
@@ -9,6 +10,42 @@ export default function Legal() {
 
     return (
         <Layout>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <title>Privacebeleid IT Context</title>
+                <meta
+                    name="description"
+                    content="Privacebeleid IT Context"
+                    data-react-helmet="true"
+                />
+                <link rel="apple-touch-icon" href="/logo192.png" />
+
+                <link rel="cannonical" href="https://itcontext.nl/" />
+
+                <meta property="og:type" content="article" />
+
+                <meta property="og:title" content="Privacebeleid IT Context" />
+
+                <meta
+                    property="og:description"
+                    content="Privacebeleid IT Context"
+                />
+
+                <meta property="og:image" content="/OGImageHomepage.png" />
+
+                <meta
+                    property="og:url"
+                    content="https://itcontext.nl/cookies"
+                />
+
+                <meta
+                    property="og:site_name"
+                    content="Privacebeleid IT Context"
+                />
+            </Head>
             <Container>
                 <PageNav>
                     <p>
