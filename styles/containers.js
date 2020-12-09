@@ -24,6 +24,7 @@ export const Grid2 = styled.div`
     grid-template-columns: 1fr;
     padding: 1.9rem;
     grid-gap: 1.9rem;
+    overflow: hidden;
 
     ${() => respond("m", "grid-template-columns: 1fr 1fr;")}
 `;

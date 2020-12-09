@@ -34,7 +34,7 @@ export default function Dienst({ serviceData }) {
         });
     }, []);
     return (
-        <Layout ref={target}>
+        <Layout>
             <Head>
                 <meta
                     name="viewport"
@@ -65,7 +65,7 @@ export default function Dienst({ serviceData }) {
 
                 <meta property="og:site_name" content={serviceData.name} />
             </Head>
-            <Background>
+            <Background ref={target}>
                 <SectionNarrow>
                     <PageNav>
                         <p>

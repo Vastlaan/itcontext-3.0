@@ -132,7 +132,7 @@ export default function Banner() {
                                     Kies een pakket
                                 </ButtonEmpty>
                             </Link>
-                            <Heading>ACTIE GELDT TOT 31 . 12 . 2020</Heading>
+                            <Heading>ACTIE GELDT TOT 31.12.2020</Heading>
                         </Part>
                     </Grid2XL>
                 </Content>
@@ -143,7 +143,8 @@ export default function Banner() {
 
 const Background = styled.div`
     background-color: ${(p) => p.theme.black};
-    margin: 4.7rem 0;
+    border: 5px solid ${(p) => p.theme.primary};
+    margin: 0;
     position: relative;
 `;
 const Part = styled.div`

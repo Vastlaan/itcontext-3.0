@@ -100,19 +100,18 @@ const Buttons = styled.div`
 `;
 const Box = styled.button`
     min-width: 9rem;
-    padding: 0rem 2.7rem;
-    border: 2px solid ${(p) => p.theme.black};
+    padding: 0rem 1.9rem;
+    border: none;
     background-color: ${(p) => p.theme.black};
     display: none;
     align-items: center;
+    justify-content: center;
     transition: all 0.3s;
     cursor: pointer;
 
     &:hover {
-        background-color: ${(p) => p.theme.white};
-        border: 2px solid ${(p) => p.theme.black};
         svg {
-            color: ${(p) => p.theme.black};
+            color: ${(p) => p.theme.primary};
         }
         span {
             color: ${(p) => p.theme.black};

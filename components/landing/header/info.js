@@ -81,9 +81,12 @@ const Buttons = styled.div`
 
 const Contact = styled.div`
     display: flex;
+    flex-direction: column;
+
+    ${() => respond("l", "flex-direction:row;")}
 
     button {
-        margin-bottom: 0.9rem;
         margin-right: 2.7rem;
+        margin-bottom: 2.7rem;
     }
 `;

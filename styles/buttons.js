@@ -213,6 +213,7 @@ export const LinkB = styled.button`
     position: relative;
     cursor: pointer;
     transition: all 0.3s;
+    text-align: left;
 
     &:hover {
         color: ${(p) => (p.color ? p.color : p.theme.silver)};

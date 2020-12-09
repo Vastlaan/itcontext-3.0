@@ -118,6 +118,7 @@ const Border = styled.div`
     border-radius: 5px;
     padding: 0.3rem 0.6rem;
     margin-right: 1.9rem;
+    cursor: pointer;
 
     svg {
         font-size: 2.7rem;
