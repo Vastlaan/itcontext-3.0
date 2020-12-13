@@ -1,21 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Confirmation from "../utils/confirmation";
 import { respond, ButtonEmpty } from "../../styles";
 
 export default function OfferComponent({ offerHeader }) {
+    const [displayConfirmation, setDisplayConfirmation] = useState(false);
+    const [email, setEmail] = useState("");
+
+    function sendOffer(e) {
+        e.preventDefault();
+
+        const offerFormData = { email };
+
+        console.log(email);
+
+        fetch("/api/sendOffer", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(offerFormData),
+        })
+            .then((res) => res.json())
+            .then(
+                (data) => data.msg === "Success" && setDisplayConfirmation(true)
+            )
+            .catch((e) => console.error(e));
+    }
+
     return (
-        <Offer>
-            <h3>{offerHeader}</h3>
-            <label htmlFor="">
-                <input type="text" placeholder="E-mail" />
-            </label>
-            <ButtonEmpty color="#c0392b" color2="white">
-                Aanvragen
-            </ButtonEmpty>
-        </Offer>
+        <>
+            <Offer onSubmit={sendOffer}>
+                <h3>{offerHeader}</h3>
+                <label>
+                    <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="text"
+                        placeholder="E-mail"
+                    />
+                </label>
+                <ButtonEmpty type="submit" color="#c0392b" color2="white">
+                    Aanvragen
+                </ButtonEmpty>
+            </Offer>
+            {displayConfirmation && (
+                <Confirmation
+                    setDisplayConfirmation={setDisplayConfirmation}
+                    heading="Bedankt voor uw aanvraag"
+                    text="We hebben jouw offerte zojuist gestuurd."
+                />
+            )}
+        </>
     );
 }
-const Offer = styled.div`
+const Offer = styled.form`
     display: flex;
     align-items: flex-start;
     padding: 2.7rem;

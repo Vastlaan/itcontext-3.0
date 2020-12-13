@@ -2,8 +2,6 @@ import SgMail from "@sendgrid/mail";
 import keys from "../../config/keys";
 
 export default function handler(req, res) {
-    console.log(req.body);
-
     SgMail.setApiKey(keys.SG_API_KEY);
 
     const { name, email, msg } = req.body;
