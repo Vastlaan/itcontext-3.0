@@ -20,8 +20,8 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
                 <NavLink>Prijzen</NavLink>
             </Link>
 
-            <Link href="/projecten">
-                <NavLink>Projecten</NavLink>
+            <Link href="/showroom">
+                <NavLink>Showroom</NavLink>
             </Link>
 
             <Link href="/contact">
