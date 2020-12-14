@@ -10,7 +10,7 @@ import { respond, SectionWide, Content, PageNav } from "../../../styles";
 
 export default function Header({ query }) {
     const target = useRef();
-    const [displayConfirmation, setDisplayConfirmation] = useState(true);
+    const [displayConfirmation, setDisplayConfirmation] = useState(false);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
