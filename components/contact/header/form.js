@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import Confirmation from "../../utils/confirmation";
+
 import { respond, HeadingLine, Para1, ButtonEmpty } from "../../../styles";
 
-export default function FormComponent({ query }) {
+export default function FormComponent({
+    query,
+    displayConfirmation,
+    setDisplayConfirmation,
+}) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
     const [isChecked, setisChecked] = useState(false);
     const [warning, setWarning] = useState("");
-    const [displayConfirmation, setDisplayConfirmation] = useState(false);
 
     function submitContactForm(e) {
         e.preventDefault();
@@ -128,13 +131,6 @@ export default function FormComponent({ query }) {
                     </ButtonEmpty>
                 </Field>
             </Panel>
-            {displayConfirmation && (
-                <Confirmation
-                    setDisplayConfirmation={setDisplayConfirmation}
-                    heading="Bedankt voor uw bericht"
-                    text="Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden."
-                />
-            )}
         </Form>
     );
 }

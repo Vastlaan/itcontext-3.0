@@ -1,14 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import styled from "styled-components";
 import Form from "./form";
 import Contact from "./contact";
+import Confirmation from "../../utils/confirmation";
 import { respond, SectionWide, Content, PageNav } from "../../../styles";
 
 export default function Header({ query }) {
     const target = useRef();
+    const [displayConfirmation, setDisplayConfirmation] = useState(true);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -23,21 +25,34 @@ export default function Header({ query }) {
         });
     }, []);
     return (
-        <SectionWide ref={target} style={{ backgroundColor: "#18191F" }}>
-            <Content style={{ paddingTop: "10rem" }}>
-                <PageNav>
-                    <p>
-                        <Link href="/">Voorpagina</Link>
-                        {" > "}
-                        <Link href="/contact">Contact</Link>
-                    </p>
-                </PageNav>
-                <Layout>
-                    <Contact />
-                    <Form query={query} />
-                </Layout>
-            </Content>
-        </SectionWide>
+        <>
+            <SectionWide ref={target} style={{ backgroundColor: "#18191F" }}>
+                <Content style={{ paddingTop: "10rem" }}>
+                    <PageNav>
+                        <p>
+                            <Link href="/">Voorpagina</Link>
+                            {" > "}
+                            <Link href="/contact">Contact</Link>
+                        </p>
+                    </PageNav>
+                    <Layout>
+                        <Contact />
+                        <Form
+                            query={query}
+                            displayConfirmation={displayConfirmation}
+                            setDisplayConfirmation={setDisplayConfirmation}
+                        />
+                    </Layout>
+                </Content>
+            </SectionWide>
+            {displayConfirmation && (
+                <Confirmation
+                    setDisplayConfirmation={setDisplayConfirmation}
+                    heading="Bedankt voor uw bericht"
+                    text="Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden."
+                />
+            )}
+        </>
     );
 }
 

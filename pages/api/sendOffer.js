@@ -4,7 +4,7 @@ import path from "path";
 import keys from "../../config/keys";
 
 export default function handler(req, res) {
-    const dir = SgMail.setApiKey(keys.SG_API_KEY);
+    SgMail.setApiKey(keys.SG_API_KEY);
 
     const { email } = req.body;
 
