@@ -12,8 +12,6 @@ export default function OfferComponent({ offerHeader }) {
 
         const offerFormData = { email };
 
-        console.log(email);
-
         fetch("/api/sendOffer", {
             method: "POST",
             headers: {
@@ -23,7 +21,7 @@ export default function OfferComponent({ offerHeader }) {
         })
             .then((res) => res.json())
             .then((d) => {
-                if (d.msg === "Sucess") {
+                if (d.msg === "Success") {
                     return setDisplayConfirmation(true);
                 }
             })

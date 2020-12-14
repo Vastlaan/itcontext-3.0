@@ -8,8 +8,10 @@ export default function handler(req, res) {
 
     const { email } = req.body;
 
-    const pathToAttachment = path.join("public", "brochure.pdf");
+    const pathToAttachment = path.join(process.cwd(), "public", "brochure.pdf");
     const attachment = fs.readFileSync(pathToAttachment).toString("base64");
+
+    console.log(pathToAttachment, process.cwd());
 
     const msg = {
         to: [email, "info@itcontext.nl"],
