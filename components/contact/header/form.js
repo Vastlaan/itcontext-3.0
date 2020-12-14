@@ -189,6 +189,9 @@ const Field = styled.div`
     button {
         align-self: flex-start;
     }
+    p {
+        margin-bottom: 0.9rem;
+    }
 `;
 const Field2 = styled.div`
     display: flex;

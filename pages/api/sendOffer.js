@@ -18,7 +18,7 @@ export default function handler(req, res) {
         attachments: [
             {
                 content: attachment,
-                filename: "Brochure.pdf",
+                filename: "brochure.pdf",
                 type: "application/pdf",
                 disposition: "attachment",
             },
