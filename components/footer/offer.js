@@ -22,9 +22,11 @@ export default function OfferComponent({ offerHeader }) {
             body: JSON.stringify(offerFormData),
         })
             .then((res) => res.json())
-            .then(
-                (data) => data.msg === "Success" && setDisplayConfirmation(true)
-            )
+            .then((d) => {
+                if (d.msg === "Sucess") {
+                    return setDisplayConfirmation(true);
+                }
+            })
             .catch((e) => console.error(e));
     }
 
