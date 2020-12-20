@@ -52,3 +52,34 @@ export const PageNav = styled.div`
         }
     }
 `;
+export const List = styled.ul`
+    padding: 2.7rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    ${() => respond("m", "padding: 0 2.7rem;")}
+
+    li {
+        font-size: 1.9rem;
+        color: ${(p) => p.theme.white};
+        display: flex;
+        align-items: center;
+        margin: 1.9rem 0;
+
+        ${() => respond("m", "margin: .9rem 0;")}
+
+        svg {
+            margin-right: 1.9rem;
+            font-size: 1.9rem;
+            color: ${(p) => p.theme.primary};
+        }
+
+        span {
+            color: ${(p) => p.theme.primary};
+            font-style: italic;
+            font-size: 1.3rem;
+            letter-spacing: 0.3rem;
+        }
+    }
+`;

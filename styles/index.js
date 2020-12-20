@@ -9,6 +9,7 @@ import {
     Grid2,
     Grid2XL,
     PageNav,
+    List,
 } from "./containers";
 import {
     ButtonFull,
@@ -40,6 +41,7 @@ export {
     Content,
     Grid2,
     Grid2XL,
+    List,
     PageNav,
     Heading1,
     Heading2,

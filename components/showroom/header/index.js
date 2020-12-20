@@ -37,7 +37,7 @@ function HeaderDiensten(props) {
                     <p>
                         <Link href="/">Voorpagina</Link>
                         {" > "}
-                        <Link href="/projecten">Projecten</Link>
+                        <Link href="/showroom">Showroom</Link>
                     </p>
                 </PageNav>
                 <Grid2>
