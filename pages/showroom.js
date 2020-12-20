@@ -52,8 +52,6 @@ export default function Gallery() {
 
             <Templates />
 
-            <Banner />
-
             <Display
                 headline="websites galerij"
                 p1="Onze technologie zorgt ervoor dat je website vanaf verschillende apparaten toegankelijk is, snel laadt en je bedrijf hoger scoort in de resultaten van zoekmachines "
@@ -71,6 +69,7 @@ export default function Gallery() {
                 setFull={setFull}
                 full={full}
             />
+            <Banner />
             {full && (
                 <Full>
                     <Social onClick={() => setFull(null)}>

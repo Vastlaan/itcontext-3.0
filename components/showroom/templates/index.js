@@ -21,7 +21,6 @@ export default function TemplatesComponent() {
                 Landing pages voorbeelden
             </HeadingLine>
             {data.map((item, i) => {
-                console.log(item.name);
                 return (
                     <Item key={item.id}>
                         <ImageContainer>
@@ -65,7 +64,7 @@ export default function TemplatesComponent() {
                                         <IoDesktopOutline />
                                     </Icon>
                                     <span color="#18191F">
-                                        Desktop Live Preview
+                                        Bekijk Live Preview
                                     </span>
                                 </Preview>
                             </Link>
@@ -88,8 +87,8 @@ const Item = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 6.7rem;
     margin: 9rem 1.9rem;
-
-    ${() => respond("m", "grid-template-columns: repeat(3, 1fr);")}
+    border-bottom: 1px solid ${(p) => p.theme.black};
+    ${() => respond("m", "grid-template-columns: repeat(3, 1fr);")};
 `;
 const ImageContainer = styled.div`
     grid-column: 1/-1;
@@ -111,23 +110,13 @@ const Info = styled.div`
     position: relative;
     ${() => respond("m", "grid-column: 2/4;")}
 
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 10rem;
-        height: 10rem;
-        background-color: ${(p) => p.theme.primary};
-        clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
-    }
-
     h3 {
         margin-bottom: 2.7rem;
     }
 
     p {
         margin-bottom: 2.7rem;
+        max-width: 70rem;
     }
 
     ul {
