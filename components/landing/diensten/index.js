@@ -17,16 +17,19 @@ const data = [
         id: 0,
         header: "Websites Ontwikkelen",
         para: `Bij het ontwerpen van onze websites zijn wij gedreven door innovatie, analyse van de doelgroep- en concurrentiegedrag, waarbij we proberen om hen altijd een stap voor te zijn.`,
+        img: "/static/img/section-marketing-header.jpg",
     },
     {
         id: 1,
         header: "Hosting, E-mail, CMS",
         para: `Ons brede aanbod onderscheidt zich door allerlei oplossingen. Wij realiseren zowel kleine als grote opdrachten, van eenvoudige maar krachtige websites tot complexe webapplicaties, e-mailadressen, Content Managment Systems en veel meer.`,
+        img: "/static/img/image-story-2.jpg",
     },
     {
         id: 2,
         header: "Online Marketing",
         para: `Laat de wereld zien wie je bent. Online activiteit is een geweldige manier om de aandacht van het publiek te trekken. Vergroot interesse in de producten en diensten van jouw bedrijf door meer verkeer naar jouw site leiden. Verhoog jouw verkoop, merkbekendheid en trust-recogintion.`,
+        img: "/static/img/image-about-short.png",
     },
 ];
 
@@ -62,10 +65,13 @@ function Diensten(props) {
                         return (
                             <Service key={`${i}-service-${service.id}`}>
                                 <Heading3>{service.header}</Heading3>
+                                <Image>
+                                    <img src={service.img} alt="service" />
+                                </Image>
                                 <Para1 align="center" color={props.theme.grey}>
                                     {service.para}
                                 </Para1>
-                                <div></div>
+                                <Deco />
                             </Service>
                         );
                     })}
@@ -115,14 +121,28 @@ const Service = styled.div`
         margin-bottom: 2.7rem;
         text-align: center;
     }
+`;
+const Deco = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    clip-path: polygon(0 0, 100% 0, 25% 25%, 0% 100%);
+    background-color: ${(p) => p.theme.primary};
+`;
 
-    div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4rem;
-        height: 4rem;
-        clip-path: polygon(0 0, 100% 0, 25% 25%, 0% 100%);
-        background-color: ${(p) => p.theme.primary};
+const Image = styled.div`
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.7rem;
+
+    img {
+        min-width: 100%;
+        height: 100%;
     }
 `;

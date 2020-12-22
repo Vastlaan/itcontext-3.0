@@ -53,7 +53,7 @@ export default function Gallery() {
             <Templates />
 
             <Display
-                headline="websites galerij"
+                headline="overige ontwerpen"
                 p1="Onze technologie zorgt ervoor dat je website vanaf verschillende apparaten toegankelijk is, snel laadt en je bedrijf hoger scoort in de resultaten van zoekmachines "
                 p2="Onze servers draaien op een van de meest beveiligde omgevingen en volgens de strengste veiligheidsregels"
                 p3="We analyseren wat er in het hoofd van je klanten gebeurd. Daarom is ons ontwerp erop gericht om je publiek te laten groeien met mogelijk veel nieuwe klanten "
