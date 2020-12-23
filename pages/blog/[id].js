@@ -9,7 +9,7 @@ import { IoMdTimer } from "react-icons/io";
 import { AiOutlineRead } from "react-icons/ai";
 
 export default function ArticleComponent({ data }) {
-    const { id, title, content, date, categories } = data;
+    const { id, title, content, date, categories, time } = data;
 
     function getMarkdownText(c) {
         var rawMarkup = marked(c, { sanitize: true });
@@ -73,7 +73,7 @@ export default function ArticleComponent({ data }) {
                         </Date>
                         <Read>
                             <AiOutlineRead />
-                            <span>read time 5 min.</span>
+                            <span>read time {time}</span>
                         </Read>
                         <Tags>
                             <span>tags:</span>
