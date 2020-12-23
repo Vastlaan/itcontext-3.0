@@ -42,7 +42,7 @@ export const PageNav = styled.div`
     a {
         text-decoration: none;
         font-weight: 400;
-        color: ${(props) => props.theme.white};
+        color: ${(props) => (props.color ? props.color : props.theme.white)};
         font-size: 1.3rem;
         letter-spacing: 0.3rem;
         transition: all 0.3s;
