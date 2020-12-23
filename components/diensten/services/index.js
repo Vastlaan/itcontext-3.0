@@ -161,7 +161,7 @@ const Card = styled.div`
     flex-direction: column;
     padding: 2.7rem 0;
 
-    h2 {
+    h1 {
         margin-bottom: 4.7rem;
     }
     h3 {

@@ -86,7 +86,7 @@ const Info = styled.div`
 
     ${() => respond("m", "grid-column: 1/3;")}
 
-    h2 {
+    h1 {
         margin-bottom: 2.7rem;
         max-width: 100rem;
     }

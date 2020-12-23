@@ -24,7 +24,7 @@ export default withTheme(PackagesComponent);
 
 const Section = styled(SectionNarrow)`
     padding: 9rem 2.7rem;
-    h2 {
+    h1 {
         margin-bottom: 4.7rem;
     }
 `;
