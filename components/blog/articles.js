@@ -62,8 +62,8 @@ export default function ArticlesComponent({ articles }) {
     );
 }
 const Article = styled.div`
-    width: 100%;
-    margin: 2rem auto;
+    width: 90%;
+    margin: 4.7rem auto;
     background-color: ${(p) => p.theme.white};
 
     button {

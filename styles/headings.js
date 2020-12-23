@@ -14,7 +14,7 @@ export const Heading1 = styled.h1`
         font-size: 2.7rem;
     }
 `;
-export const HeadingLine = styled.h2`
+export const HeadingLine = styled.h1`
     font-size: 3.3rem;
     font-weight: 900;
     color: ${(p) => (p.color ? p.color : p.theme.black)};

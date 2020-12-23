@@ -187,6 +187,7 @@ const Core = styled.div`
 
     ol {
         padding-left: 2rem;
+        margin: 1.4rem 0;
 
         li {
             font-weight: 700;

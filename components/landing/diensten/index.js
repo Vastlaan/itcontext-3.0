@@ -142,7 +142,6 @@ const Image = styled.div`
     margin-bottom: 2.7rem;
 
     img {
-        min-width: 100%;
         height: 100%;
     }
 `;

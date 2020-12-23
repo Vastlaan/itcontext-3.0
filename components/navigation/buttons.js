@@ -27,6 +27,10 @@ export default function ButtonsComponent({ isOpen, isSearch, setIsSearch }) {
             <Link href="/contact">
                 <NavLink>Contact</NavLink>
             </Link>
+
+            <Link href="/blog">
+                <NavLink>Blog</NavLink>
+            </Link>
             <Box
                 onClick={() => {
                     setResults([]);
