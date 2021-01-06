@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { TOKEN } from "../../../config/keys";
 
 import { respond, HeadingLine, Para1, ButtonEmpty } from "../../../styles";
 
@@ -15,6 +14,8 @@ export default function FormComponent({
     const [msg, setMsg] = useState("");
     const [isChecked, setisChecked] = useState(false);
     const [warning, setWarning] = useState("");
+
+    console.log(process.env.TOKEN);
 
     function submitContactForm(e) {
         e.preventDefault();
@@ -33,8 +34,9 @@ export default function FormComponent({
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.TOKEN}`,
             },
-            authorization: `Bearer ${TOKEN}`,
+
             body: JSON.stringify(data),
         })
             .then((res) => {

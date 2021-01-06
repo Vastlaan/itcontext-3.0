@@ -1,6 +1,6 @@
 import SgMail from "@sendgrid/mail";
-import keys from "../../config/keys";
 import Cors from "cors";
+import keys from "../../config/keys";
 
 // Initializing the cors middleware
 const cors = Cors({
@@ -13,11 +13,13 @@ const cors = Cors({
 function runMiddleware(req, res, fn) {
     const token = req.headers.authorization;
 
+    console.log(token, req.headers);
+
     return new Promise((resolve, reject) => {
         fn(req, res, (result) => {
             if (result instanceof Error) {
                 return reject(result);
-            } else if (token.split(" ")[1] !== keys.TOKEN) {
+            } else if (token.split(" ")[1] !== process.env.TOKEN) {
                 return reject(result);
             }
 
