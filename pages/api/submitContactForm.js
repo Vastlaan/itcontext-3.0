@@ -1,7 +1,35 @@
 import SgMail from "@sendgrid/mail";
 import keys from "../../config/keys";
+import Cors from "cors";
 
-export default function handler(req, res) {
+// Initializing the cors middleware
+const cors = Cors({
+    methods: ["GET", "POST", "OPTIONS"],
+    origin: "*",
+});
+
+// Helper method to wait for a middleware to execute before continuing
+// And to throw an error when an error happens in a middleware
+function runMiddleware(req, res, fn) {
+    const token = req.headers.authorization;
+
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result) => {
+            if (result instanceof Error) {
+                return reject(result);
+            } else if (token.split(" ")[1] !== keys.TOKEN) {
+                return reject(result);
+            }
+
+            return resolve(result);
+        });
+    });
+}
+
+export default async function handler(req, res) {
+    // Run the middleware
+    await runMiddleware(req, res, cors);
+
     SgMail.setApiKey(keys.SG_API_KEY);
 
     const { name, email, msg } = req.body;

@@ -50,7 +50,7 @@ const Contact = styled.div`
 
     ${() => respond("l", "grid-column: 1/2; align-items: stretch;")}
 
-    h2 {
+    h1 {
         margin-bottom: 4.7rem;
     }
 

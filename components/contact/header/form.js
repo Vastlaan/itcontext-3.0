@@ -141,7 +141,7 @@ const Form = styled.form`
     flex-direction: column;
     padding: 2.7rem 1.9rem;
 
-    h2 {
+    h1 {
         margin-bottom: 2.7rem;
     }
 
