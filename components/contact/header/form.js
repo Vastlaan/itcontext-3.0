@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import { TOKEN } from "../../../config/keys";
 
 import { respond, HeadingLine, Para1, ButtonEmpty } from "../../../styles";
 
@@ -33,6 +34,7 @@ export default function FormComponent({
             headers: {
                 "Content-Type": "application/json",
             },
+            authorization: `Bearer ${TOKEN}`,
             body: JSON.stringify(data),
         })
             .then((res) => {
