@@ -97,15 +97,15 @@ const Info = styled.div`
 const Buttons = styled.div`
     grid-column: 1/4;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 0 2.7rem 0;
 
     ${() =>
         respond(
             "m",
-            "grid-column: 3/4; justify-content: center; flex-direction: column;padding: 4.7rem 0;"
+            "grid-column: 3/4; justify-content: center; align-items: center; flex-direction: column;padding: 4.7rem 0;"
         )}
 
     button {

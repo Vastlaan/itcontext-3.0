@@ -17,7 +17,7 @@ import { IoDesktopOutline } from "react-icons/io5";
 export default function TemplatesComponent() {
     return (
         <SectionNarrow>
-            <HeadingLine style={{ marginBottom: "4.7rem" }}>
+            <HeadingLine style={{ margin: "0 0 4.7rem 1.9rem" }}>
                 Landing pages voorbeelden
             </HeadingLine>
             {data.map((item, i) => {

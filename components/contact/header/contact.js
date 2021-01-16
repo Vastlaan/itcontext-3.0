@@ -51,7 +51,7 @@ const Contact = styled.div`
     ${() => respond("l", "grid-column: 1/2; align-items: stretch;")}
 
     h1 {
-        margin-bottom: 4.7rem;
+        margin-bottom: 2.7rem;
     }
 
     p {
