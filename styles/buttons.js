@@ -148,15 +148,16 @@ export const NavLink = styled.button`
     position: relative;
     cursor: pointer;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
-        bottom: -10rem;
+        bottom: -2rem;
         opacity: 0;
         left: 0;
         width: 100%;
         height: 1px;
         background-color: ${(p) => (p.color ? p.color : p.theme.white)};
+        transition: all 0.3s;
     }
 
     &:hover {
@@ -165,7 +166,7 @@ export const NavLink = styled.button`
                 respond(
                     "m",
                     `opacity: 1;
-            bottom: 2rem;`
+                    bottom: 1rem;`
                 )}
         }
     }

@@ -9,10 +9,10 @@ export default function LogoComponent() {
             <Link href="/">
                 <div>
                     <Image
-                        src="/static/img/logo.svg"
+                        src="/static/img/logoPlane.svg"
                         alt="logo IT Context"
-                        width="100"
-                        height="69"
+                        width="64"
+                        height="45"
                     />
                 </div>
             </Link>
@@ -27,5 +27,5 @@ const Logo = styled.div`
     padding: 0.9rem 1.9rem;
     cursor: pointer;
     z-index: 9;
-    background-color: ${(p) => p.theme.black};
+    background-color: rgba(0, 0, 0, 0.2);
 `;

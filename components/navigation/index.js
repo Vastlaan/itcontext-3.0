@@ -37,7 +37,7 @@ const Container = styled.nav`
     padding: 0rem 2.7rem;
     display: flex;
     justify-content: flex-start;
-    background-color: ${(p) => p.theme.black};
+    background-color: rgba(9, 10, 12, 0.9);
 `;
 
 const MenuIcon = styled.button`

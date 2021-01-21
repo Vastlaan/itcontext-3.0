@@ -24,7 +24,7 @@ const Button = styled.button`
     justify-content: center;
     cursor: pointer;
     position: ${(p) => (p.isOpen ? "absolute" : "fixed")};
-    top: 2.7rem;
+    top: 1.9rem;
     right: ${(p) => (p.isOpen ? "2.7rem" : "2.7rem")};
     z-index: 10;
 
@@ -39,7 +39,7 @@ const Button = styled.button`
         transform: ${(props) => (props.isOpen ? "rotate(135deg)" : "")};
         pointer-events: none;
 
-        &:after {
+        &::after {
             width: 4.7rem;
             height: 2px;
             content: "";
@@ -52,7 +52,7 @@ const Button = styled.button`
             transform: ${(props) =>
                 props.isOpen ? "translate(0%,1rem) rotate(90deg)" : ""};
         }
-        &:before {
+        &::before {
             width: 4.7rem;
             height: 2px;
             content: "";
