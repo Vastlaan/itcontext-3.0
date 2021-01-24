@@ -34,10 +34,12 @@ const Container = styled.nav`
     left: 0;
     width: 100%;
     display: flex;
-    padding: 0rem 2.7rem;
+    padding: 0rem 0.9rem;
     display: flex;
     justify-content: flex-start;
     background-color: rgba(9, 10, 12, 0.9);
+
+    ${() => respond("m", "padding: 0 2.7rem;")}
 `;
 
 const MenuIcon = styled.button`

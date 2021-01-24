@@ -92,9 +92,12 @@ const Layout = styled.div`
     align-items: start;
     padding: 4.7rem 2.7rem;
     background-color: ${(p) => p.theme.black};
-    margin-bottom: 4.7rem;
 
-    ${() => respond("xl", "grid-template-columns: 1fr 1fr 1fr;")}
+    ${() =>
+        respond(
+            "xl",
+            "grid-template-columns: 1fr 1fr 1fr;margin-bottom: 4.7rem;"
+        )}
 `;
 
 const Heading = styled.div`

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Header, Content, Grid2 } from "../../../styles";
+import { respond, Header, Content, Grid2 } from "../../../styles";
 import Info from "./info";
 import Pictures from "./pictures";
 
@@ -26,7 +26,7 @@ export default function HeaderHomepage() {
             <BackgroundVideo>
                 <video loop muted autoPlay>
                     <source
-                        src="/static/videos/header-background-video.mp4"
+                        src="/static/videos/header-background-video2.mp4"
                         type="video/mp4"
                     />
                 </video>
@@ -54,7 +54,12 @@ const BackgroundVideo = styled.div`
     align-items: center;
 
     video {
-        min-height: 100%;
+        max-height: 100%;
+        ${() =>
+            respond(
+                "m",
+                "max-height: initial; min-height: 100%; min-width: 100%;"
+            )}
     }
 
     &::before {
@@ -64,7 +69,7 @@ const BackgroundVideo = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(10, 11, 12, 0.9);
         z-index: 0;
     }
 `;
