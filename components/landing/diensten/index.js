@@ -126,8 +126,8 @@ const Deco = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 4rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
     clip-path: polygon(0 0, 100% 0, 25% 25%, 0% 100%);
     background-color: ${(p) => p.theme.primary};
 `;

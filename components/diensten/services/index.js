@@ -137,7 +137,7 @@ const Background = styled.div`
     );`
         )}
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         bottom: 0;
