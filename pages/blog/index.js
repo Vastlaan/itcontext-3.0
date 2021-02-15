@@ -45,7 +45,7 @@ export default function Blog({ data }) {
 }
 
 export async function getServerSideProps(ctx) {
-    const res = await fetch("https://api.itcontext.nl/articles");
+    const res = await fetch("https://api.itcontext.nl/articles?_sort=id:DESC");
     const data = await res.json();
     return {
         props: { data },

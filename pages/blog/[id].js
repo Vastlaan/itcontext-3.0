@@ -109,13 +109,16 @@ const Content = styled.div`
     margin: 0 auto;
 `;
 const Article = styled.div`
-    width: 90%;
+    width: 100%;
     margin: 5rem auto;
     background-color: ${(p) => p.theme.white};
+
+    ${() => respond("m", "width: 90%;")}
 `;
 const Headline = styled.div`
     margin: 1rem 0;
     padding: 0rem 2rem;
+    padding-bottom: 1.4rem;
     border-bottom: 1px solid ${(p) => p.theme.black};
 
     h3 {
@@ -196,11 +199,13 @@ const Core = styled.div`
     p,
     li {
         font-size: 2.25rem;
+        margin: 1.4rem 0;
     }
 
     pre {
         margin: 2rem auto;
         white-space: break-spaces;
+        word-break: break-word;
         padding: 1rem;
         background-color: ${(p) => p.theme.black};
     }
