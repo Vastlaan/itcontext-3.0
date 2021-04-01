@@ -12,6 +12,7 @@ import {
     Heading1,
     Para1,
     ButtonEmpty,
+    Info,
 } from "../../styles";
 import Layout from "../../globals/layout";
 import Banner from "../../components/utils/banner";
@@ -92,7 +93,9 @@ export default function Dienst({ serviceData }) {
                                     )}
                             </Heading1>
                             <Para1>{serviceData.para1}</Para1>
-                            <Para1>{serviceData.para2}</Para1>
+                            {serviceData.para2 && (
+                                <Para1>{serviceData.para2}</Para1>
+                            )}
                             <Link href={serviceData.link}>
                                 <ButtonEmpty color="#c0392b" color2="#f6f9ff">
                                     {serviceData.btn}
@@ -141,21 +144,10 @@ export async function getStaticProps({ params }) {
 
 const Background = styled.div`
     background-color: ${(p) => p.theme.black};
-    padding: 9rem 2.7rem;
-    padding-top: 19rem;
+    padding: 10rem 2.7rem;
+    // padding-top: 19rem;
 `;
-const Info = styled.div`
-    display: flex;
-    flex-direction: column;
 
-    h1 {
-        margin-bottom: 4.7rem;
-    }
-
-    p {
-        margin-bottom: 6.7rem;
-    }
-`;
 const List = styled.ul`
     padding: 2.7rem 0;
     list-style: none;

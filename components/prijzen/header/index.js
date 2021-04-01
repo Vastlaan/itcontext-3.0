@@ -14,6 +14,7 @@ import {
     ParaLine,
     ButtonEmpty,
     PageNav,
+    Info,
 } from "../../../styles";
 
 function HeaderComponent(props) {
@@ -94,16 +95,6 @@ function HeaderComponent(props) {
 
 export default withTheme(HeaderComponent);
 
-const Info = styled.div`
-    padding: 9rem 1.9rem;
-
-    h1 {
-        margin-bottom: 4.7rem;
-    }
-    p {
-        margin-bottom: 6.7rem;
-    }
-`;
 const Banner = styled.div`
     display: none;
     flex-direction: column;

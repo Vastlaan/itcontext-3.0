@@ -13,6 +13,7 @@ import {
     ParaLine,
     ButtonEmpty,
     PageNav,
+    Info,
 } from "../../../styles";
 
 function HeaderDiensten(props) {
@@ -89,16 +90,6 @@ function HeaderDiensten(props) {
 
 export default withTheme(HeaderDiensten);
 
-const Info = styled.div`
-    padding: 9rem 0;
-
-    h1 {
-        margin-bottom: 4.7rem;
-    }
-    p {
-        margin-bottom: 6.7rem;
-    }
-`;
 const Picture = styled.div`
     display: none;
     align-items: center;

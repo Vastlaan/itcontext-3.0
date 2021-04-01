@@ -5,6 +5,8 @@ export const Header = styled.header`
     position: relative;
     padding-top: 10rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.black)};
+
+    ${() => respond("xxl", "padding-top: 10rem;")}
 `;
 export const SectionWide = styled.section`
     position: relative;
@@ -27,6 +29,21 @@ export const Grid2 = styled.div`
     overflow: hidden;
 
     ${() => respond("m", "grid-template-columns: 1fr 1fr;")}
+`;
+export const Info = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4.7rem 1.9rem;
+
+    ${() => respond("xxl", "margin: 6.8rem 1.9rem;")}
+
+    h1 {
+        margin-bottom: 4.7rem;
+    }
+    p {
+        margin-bottom: 6.7rem;
+    }
 `;
 export const Grid2XL = styled.div`
     display: grid;
