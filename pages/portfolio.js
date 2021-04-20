@@ -19,7 +19,7 @@ export default function Gallery() {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>Showroom IT Context</title>
+                <title>Portfolio IT Context</title>
                 <meta
                     name="description"
                     content="Duik in ons bedrijf en leer ons beter kennen. Wees op de hoogte van onze aanbiediengen en maak een kennis met onze nieuweste prestaties. Wij zijn jong bedrijf met grote ambities"
@@ -31,7 +31,7 @@ export default function Gallery() {
 
                 <meta property="og:type" content="article" />
 
-                <meta property="og:title" content="Showroom IT Context" />
+                <meta property="og:title" content="Portfolio IT Context" />
 
                 <meta
                     property="og:description"
@@ -42,10 +42,10 @@ export default function Gallery() {
 
                 <meta
                     property="og:url"
-                    content="https://itcontext.nl/showroom"
+                    content="https://itcontext.nl/portfolio"
                 />
 
-                <meta property="og:site_name" content="Showroom IT Context" />
+                <meta property="og:site_name" content="Portfolio IT Context" />
             </Head>
 
             <Header />
