@@ -154,7 +154,8 @@ const List = styled.ul`
     display: flex;
     flex-direction: column;
 
-    ${() => respond("m", "padding: 0 2.7rem;")}
+    ${() => respond("m", "padding: 2.7rem;")}
+    ${() => respond("xxl", "padding: 6.8rem 2.7rem;")}
 
     li {
         font-size: 1.9rem;

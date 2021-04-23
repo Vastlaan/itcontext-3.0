@@ -21,7 +21,7 @@ export default function PicturesComponent() {
     );
 }
 const Wrapper = styled.div`
-    height: 60rem;
+    //height: 60rem;
     overflow: hidden;
     position: relative;
     display: none;

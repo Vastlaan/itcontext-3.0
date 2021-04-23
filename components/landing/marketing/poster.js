@@ -11,8 +11,8 @@ export default function Poster() {
                 <Image
                     src="/static/img/image-2.jpg"
                     alt="guy behind the desktop"
-                    width="920"
-                    height="676"
+                    layout="fill"
+                    objectFit="cover"
                 />
             </ImageContainer>
             <Text>
@@ -35,7 +35,7 @@ export default function Poster() {
 const Layout = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     padding: 1.9rem;
     border: 1px solid ${(p) => p.theme.silver};
     position: relative;
@@ -45,8 +45,8 @@ const Layout = styled.div`
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 15rem;
-        height: 15rem;
+        width: 10rem;
+        height: 10rem;
         background-color: ${(p) => p.theme.primary};
         clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
     }
@@ -68,8 +68,8 @@ const Text = styled.div`
 
 const QuoteL = styled.div`
     position: absolute;
-    top: 2.7rem;
-    left: 2.7rem;
+    top: 1.4rem;
+    left: 1.4rem;
 
     svg {
         color: ${(p) => p.theme.primary};
@@ -78,8 +78,8 @@ const QuoteL = styled.div`
 `;
 const QuoteR = styled.div`
     position: absolute;
-    bottom: 2.7rem;
-    right: 2.7rem;
+    bottom: 1.4rem;
+    right: 1.4rem;
 
     svg {
         color: ${(p) => p.theme.primary};

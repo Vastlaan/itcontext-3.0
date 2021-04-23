@@ -132,7 +132,7 @@ export default function Banner() {
                                     Kies een pakket
                                 </ButtonEmpty>
                             </Link>
-                            <Heading>ACTIE GELDT TOT 31.12.2020</Heading>
+                            <Heading>ACTIE GELDT TOT 31.06.2021</Heading>
                         </Part>
                     </Grid2XL>
                 </Content>

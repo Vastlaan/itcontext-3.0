@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ButtonEmpty = styled.button`
     max-width: 35rem;
     min-height: 5rem;
-    padding: 0.9rem 1.9rem;
+    padding: 1.4rem 2.7rem;
     color: ${(p) => (p.color2 ? p.color2 : p.theme.white)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.black)};
     background-color: transparent;
@@ -46,7 +46,7 @@ export const ButtonEmpty = styled.button`
 
 export const ButtonFull = styled.button`
     max-width: 35rem;
-    padding: 0.9rem 1.9rem;
+    padding: 1.4rem 2.7rem;
     min-height: 5rem;
     color: ${(p) => (p.color2 ? p.color2 : p.theme.black)};
     border: 1px solid ${(p) => (p.color2 ? p.color2 : p.theme.black)};
@@ -88,7 +88,7 @@ export const ButtonFull = styled.button`
 `;
 export const ButtonPrimary = styled.button`
     width: 35rem;
-    padding: 0.9rem 1.9rem;
+    padding: 1.4rem 2.7rem;
     min-height: 5rem;
     color: ${(p) => (p.color ? p.color : p.theme.white)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.white)};
@@ -178,7 +178,7 @@ export const LinkA = styled.button`
     border: none;
     background-color: transparent;
     transition: all 0.3s;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     margin-right: 2.7rem;
     color: ${(p) => (p.color ? p.color : p.theme.white)};
     position: relative;
@@ -191,7 +191,7 @@ export const LinkA = styled.button`
     }
 
     svg {
-        font-size: 2.7rem;
+        font-size: 3.3rem;
         margin-right: 0.9rem;
     }
 
@@ -207,7 +207,7 @@ export const LinkB = styled.button`
     border: none;
     background-color: transparent;
     transition: all 0.3s;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     margin-right: 2.7rem;
     margin-bottom: 1.9rem;
     color: ${(p) => (p.color ? p.color : p.theme.white)};
@@ -224,7 +224,7 @@ export const LinkB = styled.button`
     }
 
     svg {
-        font-size: 2.7rem;
+        font-size: 3.3rem;
         margin-right: 0.9rem;
         transition: all 0.3s;
         color: ${(p) => p.theme.primary};

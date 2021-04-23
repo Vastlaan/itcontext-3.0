@@ -61,15 +61,15 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 4.7rem 1.9rem;
+    margin: 4.7rem 1.9rem 1.9rem 1.9rem;
 
-    ${() => respond("xxl", "margin: 6.8rem 1.9rem;")}
+    ${() => respond("xxl", "margin: 6.8rem 1.9rem 1.9rem 1.9rem;")}
 
     h1 {
         margin-bottom: 4.7rem;
     }
     p {
-        margin-bottom: 4.7rem;
+        margin-bottom: 2.7rem;
     }
 `;
 const Buttons = styled.div`

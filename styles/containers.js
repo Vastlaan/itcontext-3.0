@@ -5,7 +5,7 @@ export const Header = styled.header`
     position: relative;
     padding-top: 10rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.black)};
-
+    ${() => respond("s", "padding-top: 6.7rem;")}
     ${() => respond("xxl", "padding-top: 10rem;")}
 `;
 export const SectionWide = styled.section`
@@ -24,7 +24,7 @@ export const Content = styled.div`
 export const Grid2 = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1.9rem;
+    padding: 1.9rem 1.4rem;
     grid-gap: 1.9rem;
     overflow: hidden;
 
@@ -34,9 +34,9 @@ export const Info = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 4.7rem 1.9rem;
+    margin: 2.7rem 0;
 
-    ${() => respond("xxl", "margin: 6.8rem 1.9rem;")}
+    ${() => respond("xxl", "margin: 6.8rem 0;")}
 
     h1 {
         margin-bottom: 4.7rem;
@@ -54,7 +54,7 @@ export const Grid2XL = styled.div`
     ${() => respond("xl", "grid-template-columns: 1fr 1fr;")}
 `;
 export const PageNav = styled.div`
-    padding: 0rem 1.9rem;
+    padding: 1.9rem;
     p,
     a {
         text-decoration: none;
@@ -88,7 +88,7 @@ export const List = styled.ul`
 
         svg {
             margin-right: 1.9rem;
-            font-size: 1.9rem;
+            font-size: 2.2rem;
             color: ${(p) => p.theme.primary};
         }
 

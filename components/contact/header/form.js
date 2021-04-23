@@ -150,10 +150,7 @@ const Form = styled.form`
     }
 
     ${() =>
-        respond(
-            "l",
-            "grid-column: 2/4;grid-row: 1/2; margin-top: 4.7rem; padding: 4.7rem 2.7rem;"
-        )}
+        respond("l", "grid-column: 2/4;grid-row: 1/2; padding: 2.7rem 2.7rem;")}
 `;
 const Panel = styled.div`
     display: grid;

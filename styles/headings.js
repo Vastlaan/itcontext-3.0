@@ -56,11 +56,11 @@ export const Heading2 = styled.h2`
     }
 `;
 export const Heading3 = styled.h3`
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     color: ${(p) => (p.color ? p.color : p.theme.primary)};
-    max-width: 60rem;
+    max-width: ${(p) => (p.wide ? p.wide : "60rem")}
     line-height: 0.8;
-    text-transform: uppercase;
+    font-weight: 800;
 
     span {
         color: ${(p) => p.theme.primary};

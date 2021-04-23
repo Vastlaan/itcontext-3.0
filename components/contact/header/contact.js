@@ -44,8 +44,7 @@ const Contact = styled.div`
     grid-row: 1/2;
     display: flex;
     flex-direction: column;
-    margin-top: 4.7rem;
-    padding: 4.7rem 1.9rem;
+    padding: 2.7rem 1.9rem;
     align-items: flex-start;
 
     ${() => respond("l", "grid-column: 1/2; align-items: stretch;")}

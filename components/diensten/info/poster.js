@@ -34,7 +34,7 @@ export default function Poster() {
 const Layout = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     padding: 1.9rem;
     border: 1px solid ${(p) => p.theme.silver};
     position: relative;
@@ -61,14 +61,14 @@ const Text = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.7rem;
+    padding: 6.7rem 2.7rem;
     position: relative;
 `;
 
 const QuoteL = styled.div`
     position: absolute;
-    top: 2.7rem;
-    left: 2.7rem;
+    top: 1.4rem;
+    left: 1.4rem;
 
     svg {
         color: ${(p) => p.theme.primary};
@@ -77,8 +77,8 @@ const QuoteL = styled.div`
 `;
 const QuoteR = styled.div`
     position: absolute;
-    bottom: 2.7rem;
-    right: 2.7rem;
+    bottom: 1.4rem;
+    right: 1.4rem;
 
     svg {
         color: ${(p) => p.theme.primary};

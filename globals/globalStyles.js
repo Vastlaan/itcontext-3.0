@@ -21,11 +21,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html{
-        font-size: 40%;
+        font-size: 45%;
         box-sizing: border-box;
         font-family: ${fonts.secondary};
         ${(props) => respond("xs", `font-size:30%;`)}
-        ${(props) => respond("s", `font-size:50%;`)}
+        ${(props) => respond("s", `font-size:55%;`)}
         ${(props) => respond("m", `font-size:55%;`)}
         ${(props) => respond("l", `font-size:60%;`)}
         ${(props) => respond("xl", `font-size:62.5%;`)}
