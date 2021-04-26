@@ -69,7 +69,7 @@ const Text = styled.div`
 const QuoteL = styled.div`
     position: absolute;
     top: 1.4rem;
-    left: 1.4rem;
+    left: 0rem;
 
     svg {
         color: ${(p) => p.theme.primary};
@@ -79,7 +79,7 @@ const QuoteL = styled.div`
 const QuoteR = styled.div`
     position: absolute;
     bottom: 1.4rem;
-    right: 1.4rem;
+    right: 0rem;
 
     svg {
         color: ${(p) => p.theme.primary};

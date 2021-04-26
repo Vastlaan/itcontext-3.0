@@ -38,7 +38,7 @@ export default function Banner() {
             <Background>
                 <Content>
                     <Grid2XL>
-                        <Part>
+                        <Part align="flex-start">
                             <Logo>
                                 <Image
                                     src="/static/img/logoPlane.svg"
@@ -143,7 +143,8 @@ export default function Banner() {
 
 const Background = styled.div`
     background-color: ${(p) => p.theme.black};
-    border: 5px solid ${(p) => p.theme.primary};
+    border-top: 5px solid ${(p) => p.theme.primary};
+    border-bottom: 5px solid ${(p) => p.theme.primary};
     margin: 0;
     position: relative;
 `;
@@ -154,6 +155,11 @@ const Part = styled.div`
     justify-content: center;
     padding: 1.9rem;
     max-width: 100%;
+    ${(p) =>
+        respond(
+            "m",
+            `padding: 0; align-items: ${p.align ? p.align : "center"};`
+        )}
 `;
 const Logo = styled.div`
     display: flex;
@@ -168,6 +174,8 @@ const List = styled.ul`
     align-items: center;
     margin-bottom: 2.7rem;
 
+    ${() => respond("m", "align-items: flex-start;")}
+
     li {
         font-size: 1.9rem;
         text-transform: uppercase;
@@ -177,7 +185,7 @@ const List = styled.ul`
         text-align: center;
         margin: 0.9rem auto;
 
-        ${() => respond("m", "margin: 0.3rem auto;")}
+        ${() => respond("m", "margin: 0.3rem;text-align: left;")}
 
         span {
             color: ${(p) => p.theme.primary};

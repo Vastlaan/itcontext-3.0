@@ -3,6 +3,7 @@ import { respond } from "./respond";
 
 export const Header = styled.header`
     position: relative;
+    padding: 1.9rem;
     padding-top: 10rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.black)};
     ${() => respond("s", "padding-top: 6.7rem;")}

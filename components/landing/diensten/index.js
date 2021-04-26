@@ -67,19 +67,14 @@ function Diensten(props) {
                 <Services>
                     {data.map((service, i) => {
                         return (
-                            <Service key={`${i}-service-${service.id}`}>
+                            <Service
+                                key={`${i}-service-${service.id}`}
+                                color={i === 1 ? "rgba(0,0,0, 0.1)" : "white"}
+                            >
                                 <HeadingBox>
                                     <Heading3>{service.header}</Heading3>
                                 </HeadingBox>
 
-                                <ImageContainer>
-                                    <Image
-                                        src={service.img}
-                                        alt="service"
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
-                                </ImageContainer>
                                 <ParaContainer>
                                     <Para1
                                         align="center"
@@ -122,24 +117,22 @@ const Heading = styled.div`
     }
 `;
 const Services = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 6.7rem auto 2.7rem auto;
-
-    ${() => respond("m", "grid-template-columns: 30rem 30rem 30rem;")}
 `;
 
 const Service = styled.div`
-    width: 100%;
+    width: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4.7rem;
-
+    margin: 2.7rem;
+    background-color: ${(p) => (p.color ? p.color : `rgba(0,0,0, 0.1)`)};
     position: relative;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    ${() => respond("m", "width: 30rem;")}
+    ${() => respond("m", "width: 35rem;")}
 `;
 const HeadingBox = styled.div`
     width: 100%;
@@ -151,6 +144,7 @@ const HeadingBox = styled.div`
         ${(p) => p.theme.primary} 5%,
         transparent 5%
     );
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
     h3 {
         display: inline-block;

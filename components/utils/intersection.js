@@ -82,7 +82,7 @@ const Info = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    padding: 6.7rem 2.7rem;
+    padding: 4.7rem 2.7rem;
 
     ${() => respond("m", "grid-column: 1/3;")}
 
@@ -97,9 +97,9 @@ const Info = styled.div`
 const Buttons = styled.div`
     grid-column: 1/4;
     display: flex;
-    flex-direction: column;
+
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 0 2.7rem 0;
 
     ${() =>

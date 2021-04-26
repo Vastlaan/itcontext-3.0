@@ -87,7 +87,7 @@ export const ButtonFull = styled.button`
     }
 `;
 export const ButtonPrimary = styled.button`
-    width: 35rem;
+    // width: 35rem;
     padding: 1.4rem 2.7rem;
     min-height: 5rem;
     color: ${(p) => (p.color ? p.color : p.theme.white)};
