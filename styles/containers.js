@@ -21,6 +21,21 @@ export const Content = styled.div`
     max-width: 1255px;
     margin: 0 auto;
 `;
+export const FlexCol = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: ${(p) => (p.align ? p.align : "center")};
+    justify-content: ${(p) => (p.justify ? p.justify : "center")};
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    height: ${(p) => (p.fixedHeight ? p.fixedHeight : "auto")};
+`;
+export const FlexRow = styled.div`
+    display: flex;
+    align-items: ${(p) => (p.align ? p.align : "center")};
+    justify-content: ${(p) => (p.justify ? p.justify : "center")};
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    width: ${(p) => (p.fixedWidth ? p.fixedWidth : "auto")};
+`;
 
 export const Grid2 = styled.div`
     display: grid;

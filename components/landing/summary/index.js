@@ -38,8 +38,8 @@ export default function Summary() {
                     </Para1>
                 </Text1>
                 <Buttons>
-                    <Link href="/showroom">
-                        <ButtonEmpty>Showroom</ButtonEmpty>
+                    <Link href="/portfolio">
+                        <ButtonEmpty>Portfolio</ButtonEmpty>
                     </Link>
                     <Link href="/contact">
                         <ButtonFull>Bezoekadres</ButtonFull>

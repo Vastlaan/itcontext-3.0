@@ -59,7 +59,7 @@ function Diensten(props) {
                     <Heading1 align="center">
                         Wij{" "}
                         <span>
-                            onwikkelen <sub>creative</sub>
+                            ontwikkelen <sub>creative</sub>
                         </span>{" "}
                         ontwerpen
                     </Heading1>
@@ -69,10 +69,23 @@ function Diensten(props) {
                         return (
                             <Service
                                 key={`${i}-service-${service.id}`}
-                                color={i === 1 ? "rgba(0,0,0, 0.1)" : "white"}
+                                color={i === 1 ? "#fbfbfb" : "white"}
                             >
                                 <HeadingBox>
-                                    <Heading3>{service.header}</Heading3>
+                                    <Heading3>
+                                        {service.header
+                                            .split(" ")
+                                            .map((char, i) =>
+                                                i === 1 ? (
+                                                    <span key={i}>
+                                                        {" "}
+                                                        {char}{" "}
+                                                    </span>
+                                                ) : (
+                                                    `${char}`
+                                                )
+                                            )}
+                                    </Heading3>
                                 </HeadingBox>
 
                                 <ParaContainer>
@@ -136,7 +149,7 @@ const Service = styled.div`
 `;
 const HeadingBox = styled.div`
     width: 100%;
-    padding: 1.4rem;
+    padding: 0.9rem 1.4rem;
     text-align: center;
 
     background-image: linear-gradient(
@@ -153,7 +166,7 @@ const HeadingBox = styled.div`
         text-align: center;
         font-size: 3rem;
         color: ${(p) => p.theme.black};
-        ${() => respond("m", "font-size: 2.2rem")}
+        ${() => respond("m", "font-size: 2.7rem")}
     }
 `;
 const ButtonSpecial = styled.button`

@@ -39,17 +39,6 @@ const Layout = styled.div`
     padding: 1.9rem;
     border: 1px solid ${(p) => p.theme.silver};
     position: relative;
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 10rem;
-        height: 10rem;
-        background-color: ${(p) => p.theme.primary};
-        clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
-    }
 `;
 const ImageContainer = styled.div`
     width: 100%;
@@ -72,7 +61,7 @@ const QuoteL = styled.div`
     left: 0rem;
 
     svg {
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => p.theme.fresh};
         font-size: 4.7rem;
     }
 `;
@@ -82,7 +71,7 @@ const QuoteR = styled.div`
     right: 0rem;
 
     svg {
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => p.theme.fresh};
         font-size: 4.7rem;
     }
 `;

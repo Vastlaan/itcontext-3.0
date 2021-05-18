@@ -31,7 +31,8 @@ export const HeadingLine = styled.h1`
         top: 0;
         height: 100%;
         width: 5px;
-        background-color: ${(p) => p.theme.primary};
+        background-color: ${(p) =>
+            p.colorLine ? p.colorLine : p.theme.primary};
     }
 
     span {

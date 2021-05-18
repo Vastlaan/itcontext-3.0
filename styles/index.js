@@ -11,6 +11,8 @@ import {
     PageNav,
     List,
     Info,
+    FlexCol,
+    FlexRow,
 } from "./containers";
 import {
     ButtonFull,
@@ -44,6 +46,8 @@ export {
     Grid2XL,
     List,
     Info,
+    FlexCol,
+    FlexRow,
     PageNav,
     Heading1,
     Heading2,

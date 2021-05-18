@@ -78,34 +78,34 @@ export default function ServicesComponent() {
                             </ul>
                         </Card1>
                         <Card2>
-                            <HeadingLine color="white">
+                            <HeadingLine color="snow" colorLine="#117864">
                                 Online Marketing
                             </HeadingLine>
-                            <Heading3>Advertenties</Heading3>
+                            <Heading3 color="#117864">Advertenties</Heading3>
                             <ul>
                                 <Link href="/diensten/online-marketing">
-                                    <LinkB>
+                                    <LinkB color2="#117864">
                                         <FaChevronRight />
                                         Google Ads Campagnes oprichten
                                     </LinkB>
                                 </Link>
                                 <Link href="/diensten/online-marketing">
-                                    <LinkB>
+                                    <LinkB color2="#117864">
                                         <FaChevronRight />
                                         Facebook Ads Campagnes oprichten
                                     </LinkB>
                                 </Link>
                             </ul>
-                            <Heading3>Overig</Heading3>
+                            <Heading3 color="#117864">Overig</Heading3>
                             <ul>
                                 <Link href="/diensten/overig">
-                                    <LinkB>
+                                    <LinkB color2="#117864">
                                         <FaChevronRight />
                                         Social Media Profiles
                                     </LinkB>
                                 </Link>
                                 <Link href="/diensten/overig">
-                                    <LinkB>
+                                    <LinkB color2="#117864">
                                         <FaChevronRight />
                                         Facebook Ads Campagnes oprichten
                                     </LinkB>
@@ -144,7 +144,7 @@ const Background = styled.div`
         right: 0;
         width: 15rem;
         height: 15rem;
-        background-color: ${(p) => p.theme.primary};
+        background-color: ${(p) => p.theme.fresh};
         clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
     }
 `;

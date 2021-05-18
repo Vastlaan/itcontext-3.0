@@ -110,7 +110,7 @@ const Banner = styled.div`
     }
 `;
 const Logo = styled.div`
-    padding: 1.9rem 2.7rem;
+    padding: 1.2rem 2.7rem;
     background-color: ${(p) => p.theme.primary};
     display: flex;
     align-items: center;

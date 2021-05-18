@@ -37,7 +37,12 @@ function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
                     }}
                 >
                     <Info>
-                        <HeadingLine color={theme.white}>{header}</HeadingLine>
+                        <HeadingLine
+                            color={theme.white}
+                            colorLine={theme.fresh}
+                        >
+                            {header}
+                        </HeadingLine>
                         <Para1 color={theme.white}>{para}</Para1>
                     </Info>
                     <Buttons>
@@ -70,9 +75,9 @@ const Bulk = styled.div`
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 15rem;
-        height: 15rem;
-        background-color: ${(p) => p.theme.primary};
+        width: 12rem;
+        height: 12rem;
+        background-color: ${(p) => p.theme.fresh};
         clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
     }
 `;

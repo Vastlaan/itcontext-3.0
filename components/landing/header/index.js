@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { respond, Header, Content, Grid2 } from "../../../styles";
 import Info from "./info";
 import Pictures from "./pictures";
+import SocialMedia from "./social_media";
 
 export default function HeaderHomepage() {
     const header = useRef();
@@ -37,6 +38,7 @@ export default function HeaderHomepage() {
                     <Pictures />
                 </Grid2>
             </Content>
+            <SocialMedia />
         </Header>
     );
 }

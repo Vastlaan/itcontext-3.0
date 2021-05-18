@@ -227,6 +227,6 @@ export const LinkB = styled.button`
         font-size: 3.3rem;
         margin-right: 0.9rem;
         transition: all 0.3s;
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.primary)};
     }
 `;
