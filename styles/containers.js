@@ -6,6 +6,7 @@ export const Header = styled.header`
     padding: 1.9rem;
     padding-top: 10rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.black)};
+    overflow: hidden;
     ${() => respond("s", "padding-top: 6.7rem;")}
     ${() => respond("xxl", "padding-top: 10rem;")}
 `;

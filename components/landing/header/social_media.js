@@ -21,9 +21,9 @@ const Container = styled.div`
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(0, -50%);
-    background-color: ${(p) => p.theme.fresh};
-    padding: 1.4rem 0.6rem;
+    transform: translate(3.4rem, -50%);
+    background-color: ${(p) => p.theme.primary};
+    padding: 1.4rem 0.6rem 1.4rem 1.4rem;
     transition: all 0.3s;
     border-radius: 5px 0 0 5px;
 
@@ -38,10 +38,10 @@ const Container = styled.div`
     }
 
     &:hover {
-        padding: 1.4rem;
+        transform: translate(0, -50%);
 
         svg {
-            transform: scale(1.5);
+            // transform: scale(1.5);
         }
     }
 `;

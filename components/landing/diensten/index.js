@@ -71,20 +71,30 @@ function Diensten(props) {
                                 key={`${i}-service-${service.id}`}
                                 color={i === 1 ? "#fbfbfb" : "white"}
                             >
-                                <HeadingBox>
+                                <HeadingBox
+                                    color={
+                                        i === 0
+                                            ? props.theme.black
+                                            : i === 1
+                                            ? props.theme.fresh
+                                            : ""
+                                    }
+                                >
                                     <Heading3>
-                                        {service.header
-                                            .split(" ")
-                                            .map((char, i) =>
-                                                i === 1 ? (
-                                                    <span key={i}>
-                                                        {" "}
-                                                        {char}{" "}
-                                                    </span>
-                                                ) : (
-                                                    `${char}`
-                                                )
-                                            )}
+                                        {i === 1
+                                            ? service.header
+                                            : service.header
+                                                  .split(" ")
+                                                  .map((char, i) =>
+                                                      i === 1 ? (
+                                                          <span key={i}>
+                                                              {" "}
+                                                              {char}{" "}
+                                                          </span>
+                                                      ) : (
+                                                          `${char}`
+                                                      )
+                                                  )}
                                     </Heading3>
                                 </HeadingBox>
 
@@ -100,6 +110,8 @@ function Diensten(props) {
                                     <ButtonSpecial
                                         color={
                                             i === 1
+                                                ? props.theme.fresh
+                                                : i === 2
                                                 ? props.theme.primary
                                                 : props.theme.black
                                         }
@@ -154,7 +166,7 @@ const HeadingBox = styled.div`
 
     background-image: linear-gradient(
         to right,
-        ${(p) => p.theme.primary} 5%,
+        ${(p) => (p.color ? p.color : p.theme.primary)} 5%,
         transparent 5%
     );
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
