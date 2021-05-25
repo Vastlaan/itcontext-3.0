@@ -64,7 +64,7 @@ export const Heading3 = styled.h3`
     font-weight: 800;
 
     span {
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.primary)};
     }
     sub {
         font-size: 2.7rem;

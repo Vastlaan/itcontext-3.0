@@ -35,7 +35,7 @@ export default function Footer2() {
 
 const Footer = styled.footer`
     padding: 2.7rem 0.9rem;
-
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     background-color: ${(p) => p.theme.black};
 
     ${() => respond("l", "padding: 4.7rem; padding-bottom: 0;")}

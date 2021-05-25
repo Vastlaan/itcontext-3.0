@@ -61,7 +61,7 @@ const QuoteL = styled.div`
     left: 0rem;
 
     svg {
-        color: ${(p) => p.theme.fresh};
+        color: ${(p) => p.theme.primary};
         font-size: 4.7rem;
     }
 `;
@@ -71,7 +71,7 @@ const QuoteR = styled.div`
     right: 0rem;
 
     svg {
-        color: ${(p) => p.theme.fresh};
+        color: ${(p) => p.theme.primary};
         font-size: 4.7rem;
     }
 `;

@@ -39,7 +39,7 @@ function Section4({ header, para, btn1, btn2, link1, link2, theme }) {
                     <Info>
                         <HeadingLine
                             color={theme.white}
-                            colorLine={theme.fresh}
+                            colorLine={theme.tertiaryLight}
                         >
                             {header}
                         </HeadingLine>
@@ -77,7 +77,7 @@ const Bulk = styled.div`
         right: 0;
         width: 12rem;
         height: 12rem;
-        background-color: ${(p) => p.theme.fresh};
+        background-color: ${(p) => p.theme.tertiaryLight};
         clip-path: polygon(75% 75%, 100% 0, 100% 100%, 0 100%);
     }
 `;

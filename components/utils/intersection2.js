@@ -29,9 +29,7 @@ function Section2({ header, para1, para2, theme }) {
         <SectionWide ref={target}>
             <Bulk>
                 <Content style={{ padding: " 4.7rem 2.7rem" }}>
-                    <HeadingLine color={theme.black} colorLine={theme.fresh}>
-                        {header}
-                    </HeadingLine>
+                    <HeadingLine color={theme.black}>{header}</HeadingLine>
                     <Info>
                         <Para1 color={theme.black}>{para1}</Para1>
                         <Para1 color={theme.black}>{para2}</Para1>

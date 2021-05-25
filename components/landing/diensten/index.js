@@ -74,28 +74,60 @@ function Diensten(props) {
                                 <HeadingBox
                                     color={
                                         i === 0
-                                            ? props.theme.black
-                                            : i === 1
                                             ? props.theme.fresh
+                                            : i === 1
+                                            ? props.theme.tertiaryLight
                                             : ""
                                     }
                                 >
-                                    <Heading3>
-                                        {i === 1
-                                            ? service.header
-                                            : service.header
-                                                  .split(" ")
-                                                  .map((char, i) =>
-                                                      i === 1 ? (
-                                                          <span key={i}>
-                                                              {" "}
-                                                              {char}{" "}
-                                                          </span>
-                                                      ) : (
-                                                          `${char}`
-                                                      )
-                                                  )}
-                                    </Heading3>
+                                    {i === 0 ? (
+                                        <Heading3 color2={props.theme.fresh}>
+                                            {service.header
+                                                .split(" ")
+                                                .map((char, i) =>
+                                                    i === 1 ? (
+                                                        <span key={i}>
+                                                            {" "}
+                                                            {char}{" "}
+                                                        </span>
+                                                    ) : (
+                                                        `${char}`
+                                                    )
+                                                )}
+                                        </Heading3>
+                                    ) : i === 1 ? (
+                                        <Heading3
+                                            color2={props.theme.tertiaryLight}
+                                        >
+                                            {service.header
+                                                .split(" ")
+                                                .map((char, i) =>
+                                                    i === 1 ? (
+                                                        <span key={i}>
+                                                            {" "}
+                                                            {char}{" "}
+                                                        </span>
+                                                    ) : (
+                                                        `${char}`
+                                                    )
+                                                )}
+                                        </Heading3>
+                                    ) : (
+                                        <Heading3 color2={props.theme.primary}>
+                                            {service.header
+                                                .split(" ")
+                                                .map((char, i) =>
+                                                    i === 1 ? (
+                                                        <span key={i}>
+                                                            {" "}
+                                                            {char}{" "}
+                                                        </span>
+                                                    ) : (
+                                                        `${char}`
+                                                    )
+                                                )}
+                                        </Heading3>
+                                    )}
                                 </HeadingBox>
 
                                 <ParaContainer>
@@ -110,10 +142,10 @@ function Diensten(props) {
                                     <ButtonSpecial
                                         color={
                                             i === 1
-                                                ? props.theme.fresh
+                                                ? props.theme.tertiaryLight
                                                 : i === 2
                                                 ? props.theme.primary
-                                                : props.theme.black
+                                                : props.theme.fresh
                                         }
                                     >
                                         Lees meer
