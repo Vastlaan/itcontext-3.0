@@ -2,87 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://itcontext.nl/</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/prijzen</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/contact</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://itcontext.nl/showroom</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <loc>https://itcontext.nl/portfolio</loc>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/blog</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/websites-ontwerpen</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/webapplicaties-ontwerpen</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/online-marketing</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/webshops-oprichten</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/cms</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/hosting</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/emails-aanmaken</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/diensten/overig</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/cookies</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://itcontext.nl/voorwaarden</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.5</priority>
   </url>
   <!-- <url>
     <loc>https://itcontext.nl/blog</loc>
-    <lastmod>2020-12-23T08:48:14+00:00</lastmod>
+    <lastmod>2021-06-20T08:48:14+00:00</lastmod>
     <priority>0.5</priority>
   </url> -->
  
