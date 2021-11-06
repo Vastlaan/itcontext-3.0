@@ -24,6 +24,7 @@ export const ParaLine = styled.p`
 `;
 
 export const Para1 = styled.p`
+    margin: ${p=>p.margin || '0'};
     font-size: 1.9rem;
     color: ${(p) => (p.color ? p.color : p.theme.white)};
     max-width: 49rem;
