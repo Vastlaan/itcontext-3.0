@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 import { respond, fonts } from "../styles";
 
 export default function GlobalStl() {
-    return <GlobalStyles />;
+  return <GlobalStyles />;
 }
 
 const GlobalStyles = createGlobalStyle`

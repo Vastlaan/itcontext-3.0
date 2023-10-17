@@ -4,43 +4,41 @@ import keys from "../../config/keys";
 
 // Initializing the cors middleware
 const cors = Cors({
-    methods: ["GET", "POST", "OPTIONS"],
-    origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  origin: "*",
 });
 
 // Helper method to wait for a middleware to execute before continuing
 // And to throw an error when an error happens in a middleware
 function runMiddleware(req, res, fn) {
-    const token = req.headers.authorization;
+  const token = req.headers.authorization;
 
-    console.log(token, req.headers);
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      } else if (token.split(" ")[1] !== process.env.TOKEN) {
+        return reject(result);
+      }
 
-    return new Promise((resolve, reject) => {
-        fn(req, res, (result) => {
-            if (result instanceof Error) {
-                return reject(result);
-            } else if (token.split(" ")[1] !== process.env.TOKEN) {
-                return reject(result);
-            }
-
-            return resolve(result);
-        });
+      return resolve(result);
     });
+  });
 }
 
 export default async function handler(req, res) {
-    // Run the middleware
-    await runMiddleware(req, res, cors);
+  // Run the middleware
+  await runMiddleware(req, res, cors);
 
-    SgMail.setApiKey(keys.SG_API_KEY);
+  SgMail.setApiKey(keys.SG_API_KEY);
 
-    const { name, email, msg } = req.body;
+  const { name, email, msg } = req.body;
 
-    const message = {
-        to: [email, "info@itcontext.nl"],
-        from: "no-reply@itcontext.nl",
-        subject: "IT Context formulier ingediend",
-        html: `
+  const message = {
+    to: [email, "info@itcontext.nl"],
+    from: "no-reply@itcontext.nl",
+    subject: "IT Context formulier ingediend",
+    html: `
 
            <div style=" padding: 10px;">
   <h1
@@ -79,9 +77,9 @@ export default async function handler(req, res) {
   <a href="tel:0031682307051" style="font-family: 'Forum', sans-serif; font-size: 16px; color: #343a40; line-height: 1.3; margin: 0;">06 82 30 70 51</a>
 </div>
         `,
-    };
+  };
 
-    SgMail.send(message);
+  SgMail.send(message);
 
-    res.status(200).json({ msg: "Sucess" });
+  res.status(200).json({ msg: "Sucess" });
 }
